@@ -191,19 +191,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 </div>
 <nav class="sidebar-nav">
 <div class="nav-label">Tổng quan</div>
-<div class="nav-item active" onclick="go('dashboard')"><div class="ic" style="background:var(--accent-glow)">🏠</div>Dashboard</div>
+<div class="nav-item active" data-pg="dashboard" onclick="go('dashboard')"><div class="ic" style="background:var(--accent-glow)">🏠</div>Dashboard</div>
 
 <div class="nav-label">Luyện tập</div>
-<div class="nav-item" onclick="go('flashcard')"><div class="ic" style="background:rgba(52,211,153,.1)">🃏</div>Flashcard</div>
-<div class="nav-item" onclick="go('writing')"><div class="ic" style="background:rgba(251,191,36,.1)">✏️</div>Viết từ vựng</div>
+<div class="nav-item" data-pg="flashcard" onclick="go('flashcard')"><div class="ic" style="background:rgba(52,211,153,.1)">🃏</div>Flashcard</div>
+<div class="nav-item" data-pg="writing" onclick="go('writing')"><div class="ic" style="background:rgba(251,191,36,.1)">✏️</div>Viết từ vựng</div>
 
 <div class="nav-label">Kiến thức</div>
-<div class="nav-item" onclick="go('linking')"><div class="ic" style="background:rgba(34,211,238,.1)">🔗</div>Từ nối</div>
-<div class="nav-item" onclick="go('reading')"><div class="ic" style="background:rgba(244,114,182,.1)">📖</div>Reading Types</div>
-<div class="nav-item" onclick="go('writingguide')"><div class="ic" style="background:rgba(251,191,36,.1)">📝</div>Writing Guide</div>
-<div class="nav-item" onclick="go('speaking')"><div class="ic" style="background:rgba(52,211,153,.1)">🎤</div>Speaking Templates</div>
-<div class="nav-item" onclick="go('grammar')"><div class="ic" style="background:rgba(124,106,239,.1)">📐</div>Ngữ pháp B2</div>
-<div class="nav-item" onclick="go('schedule')"><div class="ic" style="background:rgba(248,113,113,.1)">📅</div>Lịch 14 ngày</div>
+<div class="nav-item" data-pg="linking" onclick="go('linking')"><div class="ic" style="background:rgba(34,211,238,.1)">🔗</div>Từ nối</div>
+<div class="nav-item" data-pg="reading" onclick="go('reading')"><div class="ic" style="background:rgba(244,114,182,.1)">📖</div>Reading Types</div>
+<div class="nav-item" data-pg="writingguide" onclick="go('writingguide')"><div class="ic" style="background:rgba(251,191,36,.1)">📝</div>Writing Guide</div>
+<div class="nav-item" data-pg="speaking" onclick="go('speaking')"><div class="ic" style="background:rgba(52,211,153,.1)">🎤</div>Speaking Templates</div>
+<div class="nav-item" data-pg="grammar" onclick="go('grammar')"><div class="ic" style="background:rgba(124,106,239,.1)">📐</div>Ngữ pháp B2</div>
+<div class="nav-item" data-pg="schedule" onclick="go('schedule')"><div class="ic" style="background:rgba(248,113,113,.1)">📅</div>Lịch 14 ngày</div>
 
 <div class="nav-label">14 Chủ đề</div>
 <div id="topicNav"></div>
@@ -721,8 +721,8 @@ let S={learned:0,correct:0,total:0,fcTopic:'all',fcIdx:0,fcDeck:[],wrTopic:'all'
 // ==================== INIT ====================
 function init(){
 renderTopicNav();renderTopicGrid();
-buildTabs('fcTabs',t=>{S.fcTopic=t;initFC()});
-buildTabs('wrTabs',t=>{S.wrTopic=t;initWR()});
+buildTabs('fcTabs','fc');
+buildTabs('wrTabs','wr');
 initFC();initWR();
 renderLinking();renderReading();renderWritingGuide();renderSpeaking();renderGrammar();renderSchedule();
 document.getElementById('wrInput').addEventListener('keydown',e=>{if(e.key==='Enter')wrCheck()});
@@ -735,8 +735,14 @@ document.getElementById('topicNav').innerHTML=T.map(t=>`<div class="nav-item" da
 function renderTopicGrid(){
 document.getElementById('topicGrid').innerHTML=T.map(t=>`<div class="card" onclick="openTopic('${t.id}')"><span class="em">${t.icon}</span><h3>${t.name}</h3><p>${t.words.length} từ${t.mindmap?' + Mindmap':''}</p><span class="badge">${t.words.length}</span></div>`).join('');
 }
-function buildTabs(id,cb){
-document.getElementById(id).innerHTML=`<button class="tab active" onclick="this.parentNode.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));this.classList.add('active');(${cb.toString()})('all')">Tất cả</button>`+T.map(t=>`<button class="tab" onclick="this.parentNode.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));this.classList.add('active');(${cb.toString()})('${t.id}')">${t.icon} ${t.name}</button>`).join('');
+function buildTabs(id,cbName){
+document.getElementById(id).innerHTML='<button class="tab active" onclick="tabClick(this,\''+cbName+'\',\'all\')">Tất cả</button>'+T.map(function(t){return '<button class="tab" onclick="tabClick(this,\''+cbName+'\',\''+t.id+'\')">'+t.icon+' '+t.name+'</button>';}).join('');
+}
+function tabClick(btn,cbName,val){
+btn.parentNode.querySelectorAll('.tab').forEach(function(b){b.classList.remove('active')});
+btn.classList.add('active');
+if(cbName==='fc'){S.fcTopic=val;initFC();}
+if(cbName==='wr'){S.wrTopic=val;initWR();}
 }
 
 // ===== STATIC PAGES =====
@@ -884,12 +890,10 @@ ${SCHED.map(([d,am,pm])=>`<div class="sched-row"><div class="sched-cell day">${d
 function go(pg){
 document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
 document.getElementById('pg-'+pg).classList.add('active');
-document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-const nav=document.querySelector(`.nav-item[onclick="go('${pg}')"]`);
-if(nav)nav.classList.add('active');
+document.querySelectorAll('.nav-item').forEach(n=>{n.classList.remove('active');if(n.getAttribute('data-pg')===pg)n.classList.add('active');});
 document.querySelector('.sidebar').classList.remove('open');
 if(pg==='flashcard')initFC();
-if(pg==='writing'){initWR();setTimeout(()=>document.getElementById('wrInput').focus(),100);}
+if(pg==='writing'){initWR();setTimeout(function(){document.getElementById('wrInput').focus()},100);}
 window.scrollTo(0,0);
 }
 function openTopic(id){
@@ -919,16 +923,9 @@ document.getElementById('topicMindmap').innerHTML=Object.entries(t.mindmap).map(
 }
 if(v==='practice'){
 document.getElementById('topicPractice').style.display='block';
-const deck=shuffle([...t.words]);let idx=0,c=0,w=0;
-function show(){if(idx>=deck.length)idx=0;const wd=deck[idx];document.getElementById('tpMean').textContent=wd.vi;document.getElementById('tpHint').textContent=`Gợi ý: ${wd.en[0]}${'_'.repeat(wd.en.length-1)} (${wd.en.length} ký tự)`;document.getElementById('tpIn').value='';document.getElementById('tpIn').className='wr-input';document.getElementById('tpFb').textContent='';document.getElementById('tpIn').focus();}
-document.getElementById('topicPractice').innerHTML=`<div class="wr-wrap"><div class="wr-score"><div><div class="num" id="tpC" style="color:var(--green)">0</div><div class="lbl">Đúng</div></div><div><div class="num" id="tpW" style="color:var(--red)">0</div><div class="lbl">Sai</div></div></div><div class="wr-prompt"><div class="mean" id="tpMean">—</div><div class="hint" id="tpHint"></div></div><input type="text" class="wr-input" id="tpIn" placeholder="Gõ từ tiếng Anh..." autocomplete="off"><div class="wr-fb" id="tpFb"></div><div style="display:flex;gap:10px;justify-content:center"><button class="btn" onclick="document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='Đáp án: <strong>${"'+'"+"deck[idx].en"+"'"+'"}</strong>'">Xem đáp án</button><button class="btn primary" id="tpCheckBtn">Kiểm tra ↵</button></div></div>`;
-// Re-bind after innerHTML
-setTimeout(()=>{
-document.getElementById('tpIn').addEventListener('keydown',e=>{if(e.key==='Enter')doCheck()});
-document.getElementById('tpCheckBtn').addEventListener('click',doCheck);
-show();
-},50);
-function doCheck(){const inp=document.getElementById('tpIn').value.trim().toLowerCase();const ans=deck[idx].en.toLowerCase();if(!inp)return;if(inp===ans){document.getElementById('tpIn').className='wr-input correct';document.getElementById('tpFb').className='wr-fb correct';document.getElementById('tpFb').textContent='✓ Chính xác!';c++;document.getElementById('tpC').textContent=c;setTimeout(()=>{idx++;show()},800);}else{document.getElementById('tpIn').className='wr-input wrong';document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='✗ Đáp án: <strong>'+deck[idx].en+'</strong>';w++;document.getElementById('tpW').textContent=w;}}
+window._tpDeck=shuffle([...t.words]);window._tpIdx=0;window._tpC=0;window._tpW=0;
+document.getElementById('topicPractice').innerHTML='<div class="wr-wrap"><div class="wr-score"><div><div class="num" id="tpC" style="color:var(--green)">0</div><div class="lbl">Đúng</div></div><div><div class="num" id="tpW" style="color:var(--red)">0</div><div class="lbl">Sai</div></div></div><div class="wr-prompt"><div class="mean" id="tpMean">\u2014</div><div class="hint" id="tpHint"></div></div><input type="text" class="wr-input" id="tpIn" placeholder="Gõ từ tiếng Anh..." autocomplete="off"><div class="wr-fb" id="tpFb"></div><div style="display:flex;gap:10px;justify-content:center"><button class="btn" onclick="tpShowAns()">Xem đáp án</button><button class="btn primary" onclick="tpDoCheck()">Kiểm tra \u21b5</button></div></div>';
+setTimeout(function(){document.getElementById('tpIn').addEventListener('keydown',function(e){if(e.key==='Enter')tpDoCheck()});tpShowCard();},50);
 }
 }
 
@@ -944,6 +941,11 @@ function initWR(){S.wrDeck=shuffle(getDeck(S.wrTopic));S.wrIdx=0;S.wrC=0;S.wrW=0
 function updateWR(){const d=S.wrDeck;if(!d.length)return;const w=d[S.wrIdx%d.length];document.getElementById('wrMean').textContent=w.vi;document.getElementById('wrHint').textContent=`Gợi ý: ${w.en[0]}${'_'.repeat(w.en.length-1)} (${w.en.length} ký tự)`;document.getElementById('wrInput').value='';document.getElementById('wrInput').className='wr-input';document.getElementById('wrFb').textContent='';document.getElementById('wrC').textContent=S.wrC;document.getElementById('wrW').textContent=S.wrW;document.getElementById('wrS').textContent=S.wrS;}
 function wrCheck(){const inp=document.getElementById('wrInput').value.trim().toLowerCase();const w=S.wrDeck[S.wrIdx%S.wrDeck.length];if(!inp)return;if(inp===w.en.toLowerCase()){document.getElementById('wrInput').className='wr-input correct';document.getElementById('wrFb').className='wr-fb correct';document.getElementById('wrFb').textContent='✓ Chính xác!';S.wrC++;S.wrS++;S.learned++;S.correct++;S.total++;setTimeout(()=>{S.wrIdx++;updateWR();document.getElementById('wrInput').focus();},800);}else{document.getElementById('wrInput').className='wr-input wrong';document.getElementById('wrFb').className='wr-fb wrong';document.getElementById('wrFb').innerHTML=`✗ Đáp án: <strong>${w.en}</strong>`;S.wrW++;S.wrS=0;S.total++;}updateStats();document.getElementById('wrC').textContent=S.wrC;document.getElementById('wrW').textContent=S.wrW;document.getElementById('wrS').textContent=S.wrS;}
 function wrShow(){const w=S.wrDeck[S.wrIdx%S.wrDeck.length];document.getElementById('wrFb').className='wr-fb wrong';document.getElementById('wrFb').innerHTML=`Đáp án: <strong>${w.en}</strong>`;}
+
+// ===== TOPIC PRACTICE (global functions) =====
+function tpShowCard(){if(!window._tpDeck||!window._tpDeck.length)return;if(window._tpIdx>=window._tpDeck.length)window._tpIdx=0;var w=window._tpDeck[window._tpIdx];document.getElementById('tpMean').textContent=w.vi;document.getElementById('tpHint').textContent='Gợi ý: '+w.en[0]+'_'.repeat(w.en.length-1)+' ('+w.en.length+' ký tự)';document.getElementById('tpIn').value='';document.getElementById('tpIn').className='wr-input';document.getElementById('tpFb').textContent='';document.getElementById('tpIn').focus();}
+function tpDoCheck(){var inp=document.getElementById('tpIn').value.trim().toLowerCase();var w=window._tpDeck[window._tpIdx];if(!inp||!w)return;if(inp===w.en.toLowerCase()){document.getElementById('tpIn').className='wr-input correct';document.getElementById('tpFb').className='wr-fb correct';document.getElementById('tpFb').textContent='✓ Chính xác!';window._tpC++;document.getElementById('tpC').textContent=window._tpC;setTimeout(function(){window._tpIdx++;tpShowCard();},800);}else{document.getElementById('tpIn').className='wr-input wrong';document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='✗ Đáp án: <strong>'+w.en+'</strong>';window._tpW++;document.getElementById('tpW').textContent=window._tpW;}}
+function tpShowAns(){var w=window._tpDeck[window._tpIdx];if(!w)return;document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='Đáp án: <strong>'+w.en+'</strong>';}
 
 // ===== UTILS =====
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
