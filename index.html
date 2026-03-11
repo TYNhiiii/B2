@@ -1402,7 +1402,8 @@ buildTabs('fcTabs','fc');
 buildTabs('wrTabs','wr');
 initFC();initWR();
 renderLinking();renderReading();renderWritingGuide();renderSpeaking();renderGrammar();renderSchedule();
-document.getElementById('wrInput').addEventListener('keydown',e=>{if(e.key==='Enter')wrCheck()});
+document.getElementById('wrInput').addEventListener('keydown',e=>{if(e.key==='Enter')wrCheck();});
+document.getElementById('wrInput').addEventListener('input',()=>{const el=document.getElementById('wrInput');if(el.classList.contains('wrong')){el.className='wr-input';document.getElementById('wrFb').textContent='';}});
 document.addEventListener('keydown',handleKeys);
 }
 
@@ -1475,7 +1476,11 @@ document.getElementById('linkingPracticeWrap').innerHTML=`
 </div>`;
 setTimeout(function(){
   var el=document.getElementById('lpInput');
-  if(el){el.addEventListener('keydown',function(e){if(e.key==='Enter')lpCheck();});el.focus();}
+  if(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter')lpCheck();});
+    el.addEventListener('input',function(){if(el.classList.contains('wrong')){el.className='wr-input';var fb=document.getElementById('lpFb');if(fb)fb.textContent='';}});
+    el.focus();
+  }
   lpUpdateCard();
 },50);
 }
@@ -1536,11 +1541,12 @@ if(val===correct){
 }else{
   inEl.className='wr-input wrong';
   fbEl.className='wr-fb wrong';
-  fbEl.innerHTML='✗ Đáp án: <strong>'+w.en+'</strong>';
+  fbEl.innerHTML='✗ Sai! Đáp án: <strong>'+w.en+'</strong> — hãy gõ lại';
   LP.w++;LP.s=0;S.total++;
   updateStats();
   var wEl=document.getElementById('lpW');var sEl2=document.getElementById('lpS');
   if(wEl)wEl.textContent=LP.w;if(sEl2)sEl2.textContent=LP.s;
+  setTimeout(function(){var el=document.getElementById('lpInput');if(el){el.focus();el.select();}},50);
 }
 }
 
@@ -1750,7 +1756,7 @@ document.getElementById('topicPractice').innerHTML=
 '<button class="btn primary" onclick="tpDoCheck()">Kiểm tra \u21b5</button>'+
 '</div>'+
 '</div>';
-setTimeout(function(){document.getElementById('tpIn').addEventListener('keydown',function(e){if(e.key==='Enter')tpDoCheck();});tpShowCard();},50);
+setTimeout(function(){var inp=document.getElementById('tpIn');if(inp){inp.addEventListener('keydown',function(e){if(e.key==='Enter')tpDoCheck();});inp.addEventListener('input',function(){if(inp.classList.contains('wrong')){inp.className='wr-input';var fb=document.getElementById('tpFb');if(fb)fb.textContent='';}});}tpShowCard();},50);
 }
 }
 
@@ -1764,7 +1770,7 @@ function fcNext(knew){if(knew){S.learned++;S.correct++;}S.total++;S.fcIdx++;if(S
 // ===== WRITING PRACTICE =====
 function initWR(){S.wrDeck=shuffle(getDeck(S.wrTopic));S.wrIdx=0;S.wrC=0;S.wrW=0;S.wrS=0;updateWR();}
 function updateWR(){const d=S.wrDeck;if(!d.length)return;const w=d[S.wrIdx%d.length];document.getElementById('wrMean').textContent=w.vi;document.getElementById('wrHint').textContent=`Gợi ý: ${w.en[0]}${'_'.repeat(w.en.length-1)} (${w.en.length} ký tự)`;document.getElementById('wrInput').value='';document.getElementById('wrInput').className='wr-input';document.getElementById('wrFb').textContent='';document.getElementById('wrC').textContent=S.wrC;document.getElementById('wrW').textContent=S.wrW;document.getElementById('wrS').textContent=S.wrS;}
-function wrCheck(){const inp=document.getElementById('wrInput').value.trim().toLowerCase();const w=S.wrDeck[S.wrIdx%S.wrDeck.length];if(!inp)return;if(inp===w.en.toLowerCase()){document.getElementById('wrInput').className='wr-input correct';document.getElementById('wrFb').className='wr-fb correct';document.getElementById('wrFb').textContent='✓ Chính xác!';S.wrC++;S.wrS++;S.learned++;S.correct++;S.total++;setTimeout(()=>{S.wrIdx++;updateWR();document.getElementById('wrInput').focus();},800);}else{document.getElementById('wrInput').className='wr-input wrong';document.getElementById('wrFb').className='wr-fb wrong';document.getElementById('wrFb').innerHTML=`✗ Đáp án: <strong>${w.en}</strong>`;S.wrW++;S.wrS=0;S.total++;}updateStats();document.getElementById('wrC').textContent=S.wrC;document.getElementById('wrW').textContent=S.wrW;document.getElementById('wrS').textContent=S.wrS;}
+function wrCheck(){const inp=document.getElementById('wrInput').value.trim().toLowerCase();const w=S.wrDeck[S.wrIdx%S.wrDeck.length];if(!inp)return;if(inp===w.en.toLowerCase()){document.getElementById('wrInput').className='wr-input correct';document.getElementById('wrFb').className='wr-fb correct';document.getElementById('wrFb').textContent='✓ Chính xác!';S.wrC++;S.wrS++;S.learned++;S.correct++;S.total++;setTimeout(()=>{S.wrIdx++;updateWR();document.getElementById('wrInput').focus();},800);}else{document.getElementById('wrInput').className='wr-input wrong';document.getElementById('wrFb').className='wr-fb wrong';document.getElementById('wrFb').innerHTML=`✗ Sai! Đáp án: <strong>${w.en}</strong> — hãy gõ lại hoặc nhấn Xem đáp án`;S.wrW++;S.wrS=0;S.total++;setTimeout(()=>{const el=document.getElementById('wrInput');if(el){el.focus();el.select();}},50);}updateStats();document.getElementById('wrC').textContent=S.wrC;document.getElementById('wrW').textContent=S.wrW;document.getElementById('wrS').textContent=S.wrS;}
 function wrShow(){const w=S.wrDeck[S.wrIdx%S.wrDeck.length];document.getElementById('wrFb').className='wr-fb wrong';document.getElementById('wrFb').innerHTML=`Đáp án: <strong>${w.en}</strong>`;}
 
 // ===== TOPIC PRACTICE =====
@@ -1792,7 +1798,7 @@ var inEl=document.getElementById('tpIn');var fbEl=document.getElementById('tpFb'
 if(!inEl||!window._tpDeck||!window._tpDeck.length)return;
 var inp=inEl.value.trim().toLowerCase();var w=window._tpDeck[window._tpIdx];if(!inp||!w)return;
 if(inp===w.en.toLowerCase()){inEl.className='wr-input correct';fbEl.className='wr-fb correct';fbEl.textContent='✓ Chính xác!';window._tpC++;document.getElementById('tpC').textContent=window._tpC;setTimeout(function(){window._tpIdx++;tpShowCard();},800);}
-else{inEl.className='wr-input wrong';fbEl.className='wr-fb wrong';fbEl.innerHTML='✗ Đáp án: <strong>'+w.en+'</strong>';window._tpW++;document.getElementById('tpW').textContent=window._tpW;}
+else{inEl.className='wr-input wrong';fbEl.className='wr-fb wrong';fbEl.innerHTML='✗ Sai! Đáp án: <strong>'+w.en+'</strong> — hãy gõ lại';window._tpW++;document.getElementById('tpW').textContent=window._tpW;setTimeout(function(){inEl.focus();inEl.select();},50);}
 }
 function tpShowAns(){var w=window._tpDeck&&window._tpDeck[window._tpIdx];if(!w)return;document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='Đáp án: <strong>'+w.en+'</strong>';}
 
