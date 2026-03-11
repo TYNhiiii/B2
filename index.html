@@ -78,7 +78,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .fc-col{font-size:12px;color:var(--text3);margin-top:6px}
 
 .fc-btns{display:flex;gap:10px}
-.btn{padding:10px 24px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:13px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500}
+.btn{padding:10px 24px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface);color:var(--text);font-size:13px;cursor:pointer;transition:all .2s;font-family:'DM Sans',sans-serif;font-weight:500;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
 .btn:hover{border-color:var(--accent);background:var(--accent-glow)}
 .btn.know{border-color:var(--green);color:var(--green)}.btn.know:hover{background:rgba(52,211,153,.1)}
 .btn.skip{border-color:var(--red);color:var(--red)}.btn.skip:hover{background:rgba(248,113,113,.1)}
@@ -88,10 +88,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .wr-prompt{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;text-align:center;margin-bottom:20px}
 .wr-prompt .mean{font-size:22px;font-weight:700;color:var(--accent2);margin-bottom:6px}
 .wr-prompt .hint{font-size:12px;color:var(--text3)}
-.wr-input{width:100%;padding:14px 18px;background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);color:var(--text);font-size:18px;font-family:'Space Mono',monospace;text-align:center;outline:none;transition:border-color .3s;margin-bottom:12px}
+.wr-input{width:100%;padding:14px 18px;background:var(--surface);border:2px solid var(--border);border-radius:var(--radius);color:var(--text);font-size:18px;font-family:'Space Mono',monospace;text-align:center;outline:none;transition:border-color .3s;margin-bottom:12px;-webkit-user-select:text;user-select:text;-webkit-appearance:none;appearance:none;cursor:text}
 .wr-input:focus{border-color:var(--accent)}
 .wr-input.correct{border-color:var(--green);background:rgba(52,211,153,.05)}
 .wr-input.wrong{border-color:var(--red);background:rgba(248,113,113,.05)}
+.kbd-btn{display:flex;align-items:center;justify-content:center;gap:6px;padding:8px 16px;border-radius:var(--radius);border:1px solid var(--border);background:var(--surface2);color:var(--text2);font-size:12px;cursor:pointer;margin:0 auto 12px;width:fit-content;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+.kbd-btn:active{background:var(--accent-glow);border-color:var(--accent);color:var(--accent2)}
 .wr-fb{text-align:center;font-size:14px;min-height:22px;margin-bottom:14px}
 .wr-fb.correct{color:var(--green)}.wr-fb.wrong{color:var(--red)}
 .wr-score{display:flex;gap:20px;justify-content:center;margin-bottom:20px}
@@ -259,7 +261,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 <div><div class="num" id="wrS" style="color:var(--orange)">0</div><div class="lbl">Streak</div></div>
 </div>
 <div class="wr-prompt"><div class="mean" id="wrMean">—</div><div class="hint" id="wrHint"></div></div>
-<input type="text" class="wr-input" id="wrInput" placeholder="Gõ từ tiếng Anh..." autocomplete="off">
+<input type="text" class="wr-input" id="wrInput" placeholder="Gõ từ tiếng Anh..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="text" enterkeyhint="done">
+<button class="kbd-btn" ontouchstart="focusInput('wrInput')" onclick="focusInput('wrInput')">⌨️ Bấm để mở bàn phím</button>
 <div class="wr-fb" id="wrFb"></div>
 <div style="display:flex;gap:10px;justify-content:center">
 <button class="btn" onclick="wrShow()">Xem đáp án</button>
@@ -1462,7 +1465,8 @@ document.getElementById('linkingPracticeWrap').innerHTML=`
     <div class="mean" id="lpMean">—</div>
     <div class="hint" id="lpHint"></div>
   </div>
-  <input type="text" class="wr-input" id="lpInput" placeholder="Gõ cụm từ nối tiếng Anh..." autocomplete="off">
+  <input type="text" class="wr-input" id="lpInput" placeholder="Gõ cụm từ nối tiếng Anh..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="text" enterkeyhint="done">
+  <button class="kbd-btn" ontouchstart="focusInput('lpInput')" onclick="focusInput('lpInput')">⌨️ Bấm để mở bàn phím</button>
   <div class="wr-fb" id="lpFb"></div>
   <div style="display:flex;gap:10px;justify-content:center">
     <button class="btn" onclick="lpShowAns()">Xem đáp án</button>
@@ -1738,7 +1742,8 @@ document.getElementById('topicPractice').innerHTML=
 '<div class="mean" id="tpMean">\u2014</div>'+
 '<div class="hint" id="tpHint"></div>'+
 '</div>'+
-'<input type="text" class="wr-input" id="tpIn" placeholder="Gõ tiếng Anh..." autocomplete="off" spellcheck="false">'+
+'<input type="text" class="wr-input" id="tpIn" placeholder="Gõ tiếng Anh..." autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" inputmode="text" enterkeyhint="done">'+
+'<button class="kbd-btn" ontouchstart="focusInput(\'tpIn\')" onclick="focusInput(\'tpIn\')">⌨️ Bấm để mở bàn phím</button>'+
 '<div class="wr-fb" id="tpFb"></div>'+
 '<div style="display:flex;gap:10px;justify-content:center">'+
 '<button class="btn" onclick="tpShowAns()">Xem đáp án</button>'+
@@ -1792,6 +1797,14 @@ else{inEl.className='wr-input wrong';fbEl.className='wr-fb wrong';fbEl.innerHTML
 function tpShowAns(){var w=window._tpDeck&&window._tpDeck[window._tpIdx];if(!w)return;document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='Đáp án: <strong>'+w.en+'</strong>';}
 
 // ===== UTILS =====
+function focusInput(id){
+var el=document.getElementById(id);
+if(!el)return;
+el.removeAttribute('readonly');
+el.focus();
+// iOS Safari / iPad fallback: trigger click to force keyboard
+try{el.click();}catch(e){}
+}
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function updateStats(){document.getElementById('sLearned').textContent=S.learned;const acc=S.total?Math.round(S.correct/S.total*100):0;document.getElementById('sAcc').textContent=acc+'%';const tw=T.reduce((s,t)=>s+t.words.length,0);document.getElementById('sProg').style.width=Math.min(100,S.learned/tw*100)+'%';}
 function handleKeys(e){const pg=document.querySelector('.page.active');if(!pg||pg.id!=='pg-flashcard')return;if(e.code==='Space'){e.preventDefault();flipCard();}if(e.code==='ArrowRight'){e.preventDefault();fcNext(1);}if(e.code==='ArrowLeft'){e.preventDefault();fcNext(0);}}
