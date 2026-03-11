@@ -51,7 +51,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .page-title{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;margin-bottom:6px}
 .page-desc{color:var(--text2);font-size:14px;line-height:1.6;margin-bottom:28px}
 
-/* Cards grid */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-bottom:32px}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:20px;cursor:pointer;transition:all .3s;position:relative;overflow:hidden}
 .card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 8px 30px rgba(124,106,239,.08)}
@@ -60,7 +59,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .card p{font-size:11px;color:var(--text3)}
 .card .badge{position:absolute;top:14px;right:14px;font-size:10px;background:var(--accent-glow);color:var(--accent2);padding:3px 8px;border-radius:12px;font-family:'Space Mono',monospace}
 
-/* Flashcard */
 .fc-wrap{display:flex;flex-direction:column;align-items:center;gap:20px}
 .fc-prog{display:flex;align-items:center;gap:12px;width:100%;max-width:560px}
 .fc-prog-bar{flex:1;height:5px;background:var(--surface2);border-radius:3px;overflow:hidden}
@@ -86,7 +84,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .btn.skip{border-color:var(--red);color:var(--red)}.btn.skip:hover{background:rgba(248,113,113,.1)}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}.btn.primary:hover{background:var(--accent2)}
 
-/* Writing practice */
 .wr-wrap{max-width:560px;margin:0 auto}
 .wr-prompt{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;text-align:center;margin-bottom:20px}
 .wr-prompt .mean{font-size:22px;font-weight:700;color:var(--accent2);margin-bottom:6px}
@@ -102,13 +99,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .wr-score .num{font-size:24px;font-weight:700;font-family:'Space Mono',monospace}
 .wr-score .lbl{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:1px}
 
-/* Topic tabs */
 .tabs{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
 .tab{padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text2);cursor:pointer;font-size:12px;transition:all .2s;font-family:'DM Sans',sans-serif}
 .tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
 .tab:hover:not(.active){border-color:var(--text3)}
 
-/* Vocab grid */
 .vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
 .vc{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;transition:all .2s}
 .vc:hover{border-color:var(--accent);background:var(--surface2)}
@@ -117,7 +112,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .vc .ex{font-size:11px;color:var(--text3);font-style:italic;line-height:1.4}
 .vc .co{font-size:10px;color:var(--text3);margin-top:4px;padding-top:4px;border-top:1px solid var(--border)}
 
-/* Mindmap */
 .mm-branch{margin-bottom:14px}
 .mm-hdr{font-size:13px;font-weight:700;color:var(--accent2);padding:9px 14px;background:var(--accent-glow);border-radius:var(--radius) var(--radius) 0 0;border:1px solid rgba(124,106,239,.2);border-bottom:none}
 .mm-items{border:1px solid var(--border);border-radius:0 0 var(--radius) var(--radius);overflow:hidden}
@@ -125,7 +119,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .mm-item:last-child{border-bottom:none}
 .mm-item::before{content:'→';color:var(--accent);flex-shrink:0}
 
-/* Reference sections */
 .ref-section{margin-bottom:32px}
 .ref-title{font-size:20px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:8px}
 .ref-title::before{content:'';width:4px;height:22px;background:var(--accent);border-radius:2px;flex-shrink:0}
@@ -147,17 +140,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .highlight{color:var(--accent2);font-weight:700}
 .green{color:var(--green)}.red{color:var(--red)}.orange{color:var(--orange)}.cyan{color:var(--cyan)}.pink{color:var(--pink)}
 
-/* Schedule */
 .sched-row{display:grid;grid-template-columns:60px 1fr 1fr;gap:1px;margin-bottom:1px}
 .sched-cell{padding:10px 14px;background:var(--surface);font-size:12px;color:var(--text2);line-height:1.5}
 .sched-cell.day{font-weight:700;color:var(--accent2);display:flex;align-items:center;justify-content:center;font-family:'Space Mono',monospace}
 .sched-cell.head{background:var(--surface2);color:var(--text3);font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:700}
 .sched-cell.exam{background:rgba(124,106,239,.08);border-left:3px solid var(--accent)}
 
-/* Keyboard hint */
 .kbd{display:inline-block;padding:1px 5px;background:var(--surface2);border:1px solid var(--border);border-radius:4px;font-size:10px;font-family:'Space Mono',monospace;color:var(--text3)}
 
-/* Mobile */
 .menu-toggle{display:none;position:fixed;top:12px;left:12px;z-index:200;width:36px;height:36px;border-radius:8px;background:var(--surface);border:1px solid var(--border);cursor:pointer;align-items:center;justify-content:center;font-size:16px;color:var(--text)}
 @media(max-width:768px){
 .sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0)}
@@ -214,7 +204,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 <!-- ============ DASHBOARD ============ -->
 <div class="page active" id="pg-dashboard">
 <div class="page-title">Chào Bee! 👋</div>
-<div class="page-desc">Tổng hợp <strong>280+ từ vựng B2</strong>, <strong>14 chủ đề VSTEP</strong>, chiến lược Reading/Writing/Speaking, ngữ pháp và lịch học 14 ngày.</div>
+<div class="page-desc">Tổng hợp <strong>700+ từ vựng B2</strong>, <strong>14 chủ đề VSTEP</strong>, chiến lược Reading/Writing/Speaking, ngữ pháp và lịch học 14 ngày.</div>
 
 <div class="nav-label" style="margin-bottom:10px">Luyện tập</div>
 <div style="display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap">
@@ -224,7 +214,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 
 <div class="nav-label" style="margin-bottom:10px">Kiến thức thi</div>
 <div style="display:flex;gap:12px;margin-bottom:28px;flex-wrap:wrap">
-<div class="card" onclick="go('linking')" style="flex:1;min-width:150px;border-left:3px solid var(--cyan)"><span class="em">🔗</span><h3>Từ nối</h3><p>Writing + Speaking</p></div>
+<div class="card" onclick="go('linking')" style="flex:1;min-width:150px;border-left:3px solid var(--cyan)"><span class="em">🔗</span><h3>Từ nối</h3><p>Danh sách + Luyện tập</p></div>
 <div class="card" onclick="go('reading')" style="flex:1;min-width:150px;border-left:3px solid var(--pink)"><span class="em">📖</span><h3>8 dạng Reading</h3><p>Chiến lược làm bài</p></div>
 <div class="card" onclick="go('writingguide')" style="flex:1;min-width:150px;border-left:3px solid var(--orange)"><span class="em">📝</span><h3>Writing Guide</h3><p>Task 1 + Task 2</p></div>
 <div class="card" onclick="go('speaking')" style="flex:1;min-width:150px;border-left:3px solid var(--green)"><span class="em">🎤</span><h3>Speaking</h3><p>Templates Part 1-3</p></div>
@@ -281,8 +271,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 <!-- ============ LINKING WORDS ============ -->
 <div class="page" id="pg-linking">
 <div class="page-title">🔗 Từ Nối & Cụm Từ</div>
-<div class="page-desc">Thiết yếu cho Writing Task 2 + Speaking Part 2, 3</div>
+<div class="page-desc">Thiết yếu cho Writing Task 2 + Speaking Part 2, 3 — Xem danh sách hoặc luyện gõ</div>
+<div class="tabs" id="linkingModeTabs">
+  <button class="tab active" onclick="linkingView('list',this)">📚 Danh sách</button>
+  <button class="tab" onclick="linkingView('practice',this)">✏️ Luyện tập gõ</button>
+</div>
 <div id="linkingContent"></div>
+<div id="linkingPracticeWrap" style="display:none"></div>
 </div>
 
 <!-- ============ READING TYPES ============ -->
@@ -358,9 +353,41 @@ const T=[
 {en:"acquire knowledge",vi:"tiếp thu kiến thức",ex:"Students acquire knowledge through practice."},
 {en:"critical thinking",vi:"tư duy phản biện",ex:"Schools should develop critical thinking skills."},
 {en:"plagiarism",vi:"đạo văn",ex:"Plagiarism is a serious academic offense."},
-{en:"extracurricular",vi:"ngoại khóa",ex:"Extracurricular activities build soft skills."}
+{en:"extracurricular",vi:"ngoại khóa",ex:"Extracurricular activities build soft skills."},
+{en:"lecture",vi:"bài giảng",ex:"The professor gave an interesting lecture.",col:"attend/deliver a lecture"},
+{en:"seminar",vi:"hội thảo / buổi học nhóm",ex:"We discussed the topic in the seminar."},
+{en:"syllabus",vi:"đề cương môn học",ex:"The syllabus outlines all course requirements."},
+{en:"tutor",vi:"gia sư / giáo viên hướng dẫn",ex:"She hired a tutor to help with maths."},
+{en:"campus",vi:"khuôn viên trường",ex:"The campus is very large and modern."},
+{en:"faculty",vi:"khoa / giảng viên",ex:"He joined the faculty of science."},
+{en:"internship",vi:"thực tập",ex:"She completed a summer internship at a bank.",col:"do/complete an internship"},
+{en:"research paper",vi:"bài báo nghiên cứu",ex:"He published a research paper on AI."},
+{en:"academic integrity",vi:"trung thực học thuật",ex:"Academic integrity is strictly enforced here."},
+{en:"standardized test",vi:"bài kiểm tra chuẩn hóa",ex:"The SAT is a well-known standardized test."},
+{en:"educational reform",vi:"cải cách giáo dục",ex:"The government is pushing for educational reform."},
+{en:"rote learning",vi:"học vẹt",ex:"Rote learning is ineffective for deep understanding."},
+{en:"hands-on learning",vi:"học qua thực hành",ex:"Hands-on learning improves retention."},
+{en:"peer learning",vi:"học từ bạn bè",ex:"Peer learning encourages teamwork."},
+{en:"e-learning",vi:"học trực tuyến",ex:"E-learning platforms are growing rapidly."},
+{en:"lifelong learning",vi:"học suốt đời",ex:"Lifelong learning is key in a changing world."},
+{en:"gifted",vi:"có năng khiếu / tài năng",ex:"She is a gifted student in mathematics."},
+{en:"motivation",vi:"động lực",ex:"Motivation is essential for academic success."},
+{en:"feedback",vi:"phản hồi",ex:"The teacher gave constructive feedback."},
+{en:"collaborative learning",vi:"học hợp tác",ex:"Collaborative learning improves social skills."},
+{en:"overcrowded classroom",vi:"lớp học quá đông",ex:"Overcrowded classrooms reduce teaching quality."},
+{en:"aptitude",vi:"năng khiếu / tố chất",ex:"She has a natural aptitude for languages."},
+{en:"prerequisite",vi:"môn tiên quyết",ex:"Calculus is a prerequisite for this course."},
+{en:"accreditation",vi:"kiểm định chất lượng",ex:"The school received national accreditation."},
+{en:"intellectual",vi:"người có học thức / trí tuệ",ex:"The book appeals to an intellectual audience."},
+{en:"formal education",vi:"giáo dục chính quy",ex:"Formal education is not the only path to success."},
+{en:"informal learning",vi:"học phi chính thức",ex:"Informal learning happens outside the classroom."},
+{en:"study abroad",vi:"du học",ex:"She decided to study abroad in Canada.",col:"study abroad program"},
+{en:"merit-based",vi:"dựa trên thành tích",ex:"The scholarship is merit-based."},
+{en:"competitive examination",vi:"kỳ thi cạnh tranh",ex:"The competitive examination was very difficult."},
+{en:"grade",vi:"điểm số / lớp học",ex:"She got top grades in all subjects."}
 ],colloc:"gain/acquire knowledge, pursue higher education, meet the requirements, sit/take an exam, pass with flying colors",
 mindmap:{"Introduction":["I am a third-year student at the university of...","I work as an accountant for ABC company."],"Study Duties":["do homework","make presentations","join clubs","do part-time jobs at the weekends"],"Work Duties":["I am in charge of... working with clients, solving clients' problems, contacting partners","collaborate with other departments to run the business smoothly"],"Like":["apply the knowledge and skills of field I studied in my work","have an environment to develop skills","have opportunities for promotion (có cơ hội thăng tiến)","co-workers are friendly and supportive"],"Dislike":["sometimes I have to work overtime → have less time for family and friends","the company is far from home","the workload is huge → feel tired/overloaded"]}},
+
 {id:"technology",name:"Technology",icon:"💻",color:"#f97316",day:2,words:[
 {en:"artificial intelligence",vi:"trí tuệ nhân tạo",ex:"AI is transforming many industries."},
 {en:"breakthrough",vi:"bước đột phá",ex:"Scientists made a major breakthrough.",col:"make/achieve a breakthrough"},
@@ -381,9 +408,40 @@ mindmap:{"Introduction":["I am a third-year student at the university of...","I 
 {en:"hypothesis",vi:"giả thuyết",ex:"The hypothesis was proven correct."},
 {en:"database",vi:"cơ sở dữ liệu",ex:"All records are stored in a database."},
 {en:"software",vi:"phần mềm",ex:"You need to update your software."},
-{en:"side effect",vi:"tác dụng phụ",ex:"The medicine has some side effects."}
+{en:"side effect",vi:"tác dụng phụ",ex:"The medicine has some side effects."},
+{en:"blockchain",vi:"công nghệ chuỗi khối",ex:"Blockchain is used in cryptocurrency."},
+{en:"cloud computing",vi:"điện toán đám mây",ex:"Cloud computing reduces IT costs."},
+{en:"machine learning",vi:"học máy",ex:"Machine learning powers recommendation systems."},
+{en:"augmented reality",vi:"thực tế tăng cường",ex:"Augmented reality overlays digital info on the real world."},
+{en:"Internet of Things",vi:"vạn vật kết nối",ex:"The Internet of Things connects everyday devices."},
+{en:"biotechnology",vi:"công nghệ sinh học",ex:"Biotechnology advances medicine greatly."},
+{en:"nanotechnology",vi:"công nghệ nano",ex:"Nanotechnology works at the molecular scale."},
+{en:"prototype",vi:"nguyên mẫu",ex:"Engineers built a prototype of the device.",col:"build/create a prototype"},
+{en:"patent",vi:"bằng sáng chế",ex:"The company applied for a patent.",col:"file/apply for a patent"},
+{en:"encryption",vi:"mã hóa",ex:"Encryption protects your data online."},
+{en:"malware",vi:"phần mềm độc hại",ex:"Malware can damage your computer system."},
+{en:"drone",vi:"máy bay không người lái",ex:"Drones are used in delivery services."},
+{en:"3D printing",vi:"in 3D",ex:"3D printing can manufacture complex objects quickly."},
+{en:"semiconductor",vi:"chất bán dẫn",ex:"Semiconductors are essential for electronics."},
+{en:"fiber optic",vi:"cáp quang",ex:"Fiber optic cables enable fast internet."},
+{en:"quantum computing",vi:"điện toán lượng tử",ex:"Quantum computing could solve complex problems."},
+{en:"solar panel",vi:"tấm pin năng lượng mặt trời",ex:"Solar panels generate clean electricity."},
+{en:"electric vehicle",vi:"xe điện",ex:"Electric vehicles reduce carbon emissions."},
+{en:"touchscreen",vi:"màn hình cảm ứng",ex:"The touchscreen interface is very intuitive."},
+{en:"wearable technology",vi:"công nghệ đeo",ex:"Wearable technology tracks your health."},
+{en:"GPS",vi:"hệ thống định vị toàn cầu",ex:"GPS helps navigate in unfamiliar cities."},
+{en:"wireless",vi:"không dây",ex:"The office uses wireless connectivity."},
+{en:"interface",vi:"giao diện",ex:"The user interface is clean and simple."},
+{en:"upgrade",vi:"nâng cấp",ex:"They upgraded the software to fix bugs.",col:"upgrade to/from a version"},
+{en:"bandwidth",vi:"băng thông",ex:"More bandwidth allows faster downloads."},
+{en:"download",vi:"tải xuống",ex:"Download the app from the store."},
+{en:"upload",vi:"tải lên",ex:"Upload your documents to the cloud."},
+{en:"virus",vi:"vi-rút máy tính",ex:"A virus corrupted all the files."},
+{en:"hacker",vi:"tin tặc",ex:"Hackers attacked the company's servers."},
+{en:"application",vi:"ứng dụng",ex:"This application tracks your fitness data."}
 ],colloc:"carry out research, conduct an experiment, make a discovery, develop a theory, launch an application",
 mindmap:{"Advantages":["perform faster and more efficiently"],"Disadvantages":["have less social interactions","make people lazier → depend too much on machines → refuse to do tasks by hand","increase the unemployment rate"],"Solutions":["join social activities: team building, picnic, party","raise the sense of responsibility","take programs or training courses to control modern machines","update themselves with the development of science and technology"],"Machine Uses":["be a good way of learning: read newspapers online, download information, learn online","be convenient for work/study: work faster and more efficiently → typing, printing documents, storing data","be a good way to entertain: play games, listen to music, watch movies, join forums"]}},
+
 {id:"environment",name:"Environment",icon:"🌿",color:"#22c55e",day:3,words:[
 {en:"climate change",vi:"biến đổi khí hậu",ex:"Climate change is a global threat."},
 {en:"global warming",vi:"nóng lên toàn cầu",ex:"Global warming causes sea levels to rise."},
@@ -404,9 +462,40 @@ mindmap:{"Advantages":["perform faster and more efficiently"],"Disadvantages":["
 {en:"pesticide",vi:"thuốc trừ sâu",ex:"Pesticides can contaminate water."},
 {en:"greenhouse effect",vi:"hiệu ứng nhà kính",ex:"The greenhouse effect traps heat."},
 {en:"natural disaster",vi:"thảm họa thiên nhiên",ex:"Natural disasters are becoming more frequent."},
-{en:"eco-friendly",vi:"thân thiện môi trường",ex:"Use eco-friendly products."}
+{en:"eco-friendly",vi:"thân thiện môi trường",ex:"Use eco-friendly products."},
+{en:"carbon footprint",vi:"dấu chân carbon",ex:"Flying increases your carbon footprint.",col:"reduce/calculate your carbon footprint"},
+{en:"ozone layer",vi:"tầng ôzôn",ex:"The ozone layer protects us from UV rays."},
+{en:"acid rain",vi:"mưa axit",ex:"Acid rain damages forests and buildings."},
+{en:"soil erosion",vi:"xói mòn đất",ex:"Soil erosion reduces agricultural productivity."},
+{en:"overpopulation",vi:"dân số quá đông",ex:"Overpopulation strains natural resources."},
+{en:"reforestation",vi:"trồng rừng lại",ex:"Reforestation helps restore ecosystems.",col:"reforestation program"},
+{en:"renewable resource",vi:"tài nguyên tái tạo",ex:"Solar energy is a renewable resource."},
+{en:"non-renewable resource",vi:"tài nguyên không tái tạo",ex:"Coal is a non-renewable resource."},
+{en:"water scarcity",vi:"khan hiếm nước",ex:"Water scarcity affects billions of people."},
+{en:"air quality",vi:"chất lượng không khí",ex:"Poor air quality causes respiratory diseases."},
+{en:"toxic waste",vi:"chất thải độc hại",ex:"Toxic waste must be disposed of safely."},
+{en:"ocean acidification",vi:"axit hóa đại dương",ex:"Ocean acidification harms marine life."},
+{en:"species extinction",vi:"tuyệt chủng loài",ex:"Species extinction is accelerating worldwide."},
+{en:"composting",vi:"ủ phân hữu cơ",ex:"Composting reduces household food waste."},
+{en:"organic farming",vi:"nông nghiệp hữu cơ",ex:"Organic farming avoids synthetic chemicals."},
+{en:"carbon neutral",vi:"trung hòa carbon",ex:"The company aims to be carbon neutral by 2030."},
+{en:"environmental policy",vi:"chính sách môi trường",ex:"Stronger environmental policies are needed."},
+{en:"green energy",vi:"năng lượng xanh",ex:"Green energy comes from natural sources."},
+{en:"depletion",vi:"sự cạn kiệt",ex:"Ozone depletion is a serious problem.",col:"ozone depletion, resource depletion"},
+{en:"contamination",vi:"nhiễm bẩn / ô nhiễm",ex:"Water contamination poses health risks."},
+{en:"overfishing",vi:"đánh bắt cá quá mức",ex:"Overfishing threatens ocean food chains."},
+{en:"coral reef",vi:"rạn san hô",ex:"Coral reefs are highly biodiverse ecosystems."},
+{en:"sea level rise",vi:"mực nước biển dâng",ex:"Sea level rise threatens coastal cities."},
+{en:"heatwave",vi:"đợt nắng nóng",ex:"The heatwave broke all temperature records."},
+{en:"landfill",vi:"bãi chôn lấp rác",ex:"Landfills generate harmful methane gas."},
+{en:"emissions trading",vi:"giao dịch phát thải",ex:"Emissions trading creates market incentives."},
+{en:"environmental impact",vi:"tác động môi trường",ex:"Companies must assess their environmental impact."},
+{en:"degrade",vi:"xuống cấp / suy thoái",ex:"Plastic takes centuries to degrade."},
+{en:"ecological",vi:"thuộc sinh thái học",ex:"The ecological balance is very delicate."},
+{en:"sustainability",vi:"tính bền vững",ex:"Sustainability is at the core of our policy."}
 ],colloc:"raise awareness, pose a threat to, have a devastating impact on, take measures to, tackle the problem of",
 mindmap:{"Good habits":["reuse and recycle products","consume less energy / save energy","sort trash","use more reusable products"],"Benefits":["protect the environment in the long term","conserve natural resources","reduce levels of pollution","tackle some causes of global warming"],"Drawbacks":["cause global warming / climate change","pollute the environment","exploit natural resources","increase greenhouse gas emissions"]}},
+
 {id:"health",name:"Health",icon:"🏥",color:"#ef4444",day:4,words:[
 {en:"symptom",vi:"triệu chứng",ex:"Fever is a common symptom of flu."},
 {en:"diagnosis",vi:"chẩn đoán",ex:"Early diagnosis improves treatment outcomes."},
@@ -427,9 +516,40 @@ mindmap:{"Good habits":["reuse and recycle products","consume less energy / save
 {en:"recovery",vi:"hồi phục",ex:"His recovery took several weeks."},
 {en:"allergy",vi:"dị ứng",ex:"She has a severe allergy to peanuts."},
 {en:"healthcare system",vi:"hệ thống y tế",ex:"The healthcare system needs improvement."},
-{en:"life expectancy",vi:"tuổi thọ trung bình",ex:"Life expectancy has increased worldwide."}
+{en:"life expectancy",vi:"tuổi thọ trung bình",ex:"Life expectancy has increased worldwide."},
+{en:"prevention",vi:"phòng ngừa",ex:"Prevention is better than cure.",col:"disease prevention, prevention campaign"},
+{en:"medication",vi:"thuốc / dùng thuốc",ex:"He takes medication for high blood pressure.",col:"take/prescribe medication"},
+{en:"rehabilitation",vi:"phục hồi chức năng",ex:"She attended rehabilitation after the accident."},
+{en:"physiotherapy",vi:"vật lý trị liệu",ex:"Physiotherapy helped him recover mobility."},
+{en:"specialist",vi:"bác sĩ chuyên khoa",ex:"She was referred to a specialist.",col:"consult a specialist"},
+{en:"emergency",vi:"cấp cứu",ex:"Call an ambulance in an emergency.",col:"emergency room, emergency service"},
+{en:"blood pressure",vi:"huyết áp",ex:"High blood pressure raises stroke risk.",col:"high/low blood pressure"},
+{en:"diabetes",vi:"tiểu đường",ex:"Type 2 diabetes is linked to poor diet."},
+{en:"depression",vi:"trầm cảm",ex:"Depression affects millions globally.",col:"suffer from depression"},
+{en:"anxiety",vi:"lo lắng / rối loạn lo âu",ex:"Anxiety disorders are very common."},
+{en:"insomnia",vi:"mất ngủ",ex:"Insomnia affects concentration and mood."},
+{en:"malnutrition",vi:"suy dinh dưỡng",ex:"Malnutrition is a serious issue in developing countries."},
+{en:"epidemic",vi:"dịch bệnh",ex:"The epidemic spread rapidly through the region."},
+{en:"hygiene",vi:"vệ sinh",ex:"Good hygiene prevents many diseases.",col:"personal hygiene, food hygiene"},
+{en:"calorie",vi:"calo",ex:"This meal contains over 800 calories."},
+{en:"supplement",vi:"thực phẩm bổ sung",ex:"She takes vitamin supplements daily."},
+{en:"clinical trial",vi:"thử nghiệm lâm sàng",ex:"The drug passed clinical trials successfully."},
+{en:"organ donation",vi:"hiến tạng",ex:"Organ donation can save lives."},
+{en:"health insurance",vi:"bảo hiểm y tế",ex:"Health insurance covers hospital costs."},
+{en:"mortality rate",vi:"tỷ lệ tử vong",ex:"The mortality rate decreased with better treatment."},
+{en:"outpatient",vi:"bệnh nhân ngoại trú",ex:"She was treated as an outpatient."},
+{en:"inpatient",vi:"bệnh nhân nội trú",ex:"He stayed as an inpatient for three days."},
+{en:"heart rate",vi:"nhịp tim",ex:"Exercise raises your heart rate.",col:"increase/decrease heart rate"},
+{en:"cancer",vi:"ung thư",ex:"Early detection greatly improves cancer survival rates."},
+{en:"overweight",vi:"thừa cân",ex:"Being overweight increases health risks."},
+{en:"workout",vi:"bài tập thể dục",ex:"I do a workout every morning.",col:"daily workout"},
+{en:"balanced diet",vi:"chế độ ăn cân bằng",ex:"A balanced diet is essential for health."},
+{en:"immune",vi:"miễn dịch",ex:"Children need to be immune to common diseases."},
+{en:"paramedic",vi:"nhân viên y tế cấp cứu",ex:"The paramedic stabilized the patient at the scene."},
+{en:"malpractice",vi:"sơ suất y tế",ex:"The hospital was sued for malpractice."}
 ],colloc:"undergo surgery, prescribe medication, seek medical advice, suffer from (a disease), lead a healthy lifestyle",
 mindmap:{"Good habits":["eat healthy food: more fruits, fish, vegetables","drink more water everyday","eat less meat and fat food, junk food","exercise everyday","have a regular health check-up → visit a doctor regularly to find out any diseases soon"],"Benefits of good habits":["stay healthy","keep fit","have a better immune system","make us strong and relaxed"],"Bad habits":["eat too much unhealthy food (fast food, junk food → be fast and convenient, have affordable meals, have various choices)","eat too much meat, eat less vegetables, less fruits","don't exercise regularly","don't have a regular health check-up"],"Problems from bad habits":["increase the risk of health problems","increase the cholesterol level in blood","can't focus on work or study","it is easy to get tired and ill"],"Common Diseases":["obesity: béo phì","diabetes: tiểu đường","heart disease: bệnh về tim mạch","sleep disturbance: rối loạn giấc ngủ","high blood pressure: cao huyết áp"]}},
+
 {id:"work",name:"Work & Career",icon:"💼",color:"#3b82f6",day:5,words:[
 {en:"unemployment",vi:"thất nghiệp",ex:"Unemployment rose during the recession."},
 {en:"salary",vi:"lương tháng",ex:"His salary was increased by 10%."},
@@ -450,8 +570,39 @@ mindmap:{"Good habits":["eat healthy food: more fruits, fish, vegetables","drink
 {en:"competitive",vi:"cạnh tranh",ex:"The job market is very competitive."},
 {en:"apply for",vi:"ứng tuyển",ex:"I applied for a marketing position."},
 {en:"job satisfaction",vi:"sự hài lòng công việc",ex:"Job satisfaction matters more than salary."},
-{en:"work-life balance",vi:"cân bằng công việc-cuộc sống",ex:"Companies should promote work-life balance."}
+{en:"work-life balance",vi:"cân bằng công việc - cuộc sống",ex:"Companies should promote work-life balance."},
+{en:"occupation",vi:"nghề nghiệp",ex:"What is your occupation?"},
+{en:"profession",vi:"nghề chuyên môn",ex:"Medicine is a highly respected profession."},
+{en:"apprenticeship",vi:"học việc / thực tập nghề",ex:"He completed a plumbing apprenticeship."},
+{en:"career path",vi:"lộ trình sự nghiệp",ex:"She planned her career path carefully.",col:"follow a career path"},
+{en:"redundancy",vi:"bị sa thải do cắt giảm",ex:"He faced redundancy when the company downsized.",col:"face/accept redundancy"},
+{en:"incentive",vi:"khuyến khích / tiền thưởng",ex:"The company offers financial incentives.",col:"financial incentive, incentive scheme"},
+{en:"bonus",vi:"tiền thưởng",ex:"Staff received a year-end bonus.",col:"annual/performance bonus"},
+{en:"employee benefits",vi:"phúc lợi nhân viên",ex:"Employee benefits include health insurance."},
+{en:"maternity leave",vi:"nghỉ thai sản",ex:"She took three months of maternity leave."},
+{en:"remote work",vi:"làm việc từ xa",ex:"Remote work has become much more common."},
+{en:"performance review",vi:"đánh giá hiệu suất",ex:"His annual performance review went well."},
+{en:"networking",vi:"kết nối chuyên nghiệp",ex:"Networking is important for career growth."},
+{en:"startup",vi:"công ty khởi nghiệp",ex:"She co-founded a tech startup."},
+{en:"outsourcing",vi:"thuê ngoài",ex:"The firm is outsourcing its IT services."},
+{en:"multitask",vi:"làm nhiều việc cùng lúc",ex:"She can multitask effectively.",col:"ability to multitask"},
+{en:"burnout",vi:"kiệt sức vì công việc",ex:"He suffered from burnout after years of stress."},
+{en:"leadership",vi:"khả năng lãnh đạo",ex:"Strong leadership is crucial for success.",col:"leadership skills, leadership role"},
+{en:"cover letter",vi:"thư xin việc",ex:"Write a compelling cover letter."},
+{en:"résumé",vi:"sơ yếu lý lịch / CV",ex:"Update your résumé before applying."},
+{en:"negotiate",vi:"đàm phán",ex:"She negotiated a higher salary.",col:"negotiate a deal/salary"},
+{en:"workforce",vi:"lực lượng lao động",ex:"The aging workforce is a concern.",col:"skilled/unskilled workforce"},
+{en:"overtime",vi:"làm thêm giờ",ex:"He often works overtime during busy periods.",col:"work overtime, overtime pay"},
+{en:"internship",vi:"thực tập",ex:"The internship provided valuable experience."},
+{en:"headquarters",vi:"trụ sở chính",ex:"The company's headquarters is in Hanoi."},
+{en:"subsidiary",vi:"công ty con",ex:"They opened a subsidiary in Singapore."},
+{en:"merger",vi:"sáp nhập",ex:"The merger created the world's largest bank."},
+{en:"severance pay",vi:"trợ cấp thôi việc",ex:"He received generous severance pay."},
+{en:"payroll",vi:"bảng lương",ex:"The payroll is processed every month."},
+{en:"workflow",vi:"quy trình công việc",ex:"We need to improve our workflow efficiency."},
+{en:"entrepreneur",vi:"doanh nhân khởi nghiệp",ex:"Young entrepreneurs are driving innovation."}
 ],colloc:"earn a living, make a profit/loss, meet a deadline, hand in one's resignation, land a job"},
+
 {id:"society",name:"Society",icon:"🏛️",color:"#8b5cf6",day:6,words:[
 {en:"poverty",vi:"nghèo đói",ex:"Poverty affects millions of people."},
 {en:"inequality",vi:"bất bình đẳng",ex:"Income inequality is a major issue."},
@@ -472,9 +623,40 @@ mindmap:{"Good habits":["eat healthy food: more fruits, fish, vegetables","drink
 {en:"awareness",vi:"nhận thức",ex:"Public awareness of the issue has grown."},
 {en:"social media",vi:"mạng xã hội",ex:"Social media influences opinions."},
 {en:"protest",vi:"biểu tình",ex:"Thousands joined the peaceful protest."},
-{en:"tolerance",vi:"sự khoan dung",ex:"Society needs more tolerance and respect."}
+{en:"tolerance",vi:"sự khoan dung",ex:"Society needs more tolerance and respect."},
+{en:"social justice",vi:"công bằng xã hội",ex:"Social justice activists fight for equal rights."},
+{en:"marginalized",vi:"bị gạt ra ngoài lề",ex:"Marginalized groups need greater support."},
+{en:"privilege",vi:"đặc quyền",ex:"Recognizing one's privilege is important."},
+{en:"empowerment",vi:"trao quyền",ex:"Education is key to the empowerment of women."},
+{en:"social mobility",vi:"dịch chuyển xã hội",ex:"Social mobility allows people to improve their status."},
+{en:"democracy",vi:"dân chủ",ex:"Democracy depends on informed citizens."},
+{en:"corruption",vi:"tham nhũng",ex:"Corruption undermines public trust.",col:"fight/combat corruption"},
+{en:"transparency",vi:"minh bạch",ex:"Government transparency builds trust."},
+{en:"accountability",vi:"trách nhiệm giải trình",ex:"Accountability in government is essential."},
+{en:"legislation",vi:"luật pháp / lập pháp",ex:"New legislation was passed by parliament."},
+{en:"stereotype",vi:"định kiến",ex:"We should challenge harmful stereotypes."},
+{en:"prejudice",vi:"thành kiến",ex:"Prejudice prevents fair treatment."},
+{en:"refugee",vi:"người tị nạn",ex:"Thousands of refugees sought asylum."},
+{en:"asylum seeker",vi:"người xin tị nạn",ex:"Asylum seekers fled from conflict zones."},
+{en:"social enterprise",vi:"doanh nghiệp xã hội",ex:"Social enterprises address societal problems."},
+{en:"philanthropy",vi:"hoạt động từ thiện quy mô lớn",ex:"Philanthropy helps fund public institutions."},
+{en:"demographic",vi:"nhân khẩu học",ex:"Demographic changes affect public policy."},
+{en:"birth rate",vi:"tỷ lệ sinh",ex:"The birth rate has been falling for decades."},
+{en:"ageing population",vi:"dân số già",ex:"An ageing population strains pension systems."},
+{en:"enforcement",vi:"thực thi pháp luật",ex:"Strict enforcement of laws reduces crime."},
+{en:"civil society",vi:"xã hội dân sự",ex:"Civil society plays a key watchdog role."},
+{en:"sanction",vi:"lệnh trừng phạt",ex:"Economic sanctions were imposed on the country."},
+{en:"integration",vi:"hòa nhập",ex:"Social integration reduces inequality."},
+{en:"non-governmental organization",vi:"tổ chức phi chính phủ",ex:"NGOs provide aid in disaster areas."},
+{en:"role model",vi:"hình mẫu",ex:"Teachers can be excellent role models."},
+{en:"peer influence",vi:"ảnh hưởng từ bạn bè đồng trang lứa",ex:"Peer influence shapes teenage behavior."},
+{en:"bystander effect",vi:"hiệu ứng người ngoài cuộc",ex:"The bystander effect reduces individual responsibility."},
+{en:"social norm",vi:"chuẩn mực xã hội",ex:"Social norms vary between cultures."},
+{en:"exclusion",vi:"sự loại trừ",ex:"Social exclusion leads to poverty.",col:"social exclusion"},
+{en:"solidarity",vi:"tinh thần đoàn kết",ex:"Community solidarity helped the recovery effort."}
 ],colloc:"raise awareness, bridge the gap, tackle a problem, make a contribution to, have a significant impact on",
 mindmap:{"Crime - Causes":["not be nurtured with love, care and support → parents are too busy with work","get access to many violent games → copy bad things on the internet","poverty → not have enough means to secure a living in the right ways → commit crimes (the easiest way to get what they want, not require any skills or talents)"],"Crime - Solutions":["parents should spend more time with children: control their activities and behaviors, give advice to children, prevent children from making mistakes","punish those who commit a crime → send criminals to a rehabilitation center → learn how to behave well, get vocational training → find a job later"]}},
+
 {id:"travel",name:"Travel & Tourism",icon:"✈️",color:"#06b6d4",day:7,words:[
 {en:"destination",vi:"điểm đến",ex:"Paris is a popular tourist destination."},
 {en:"accommodation",vi:"chỗ ở",ex:"We booked accommodation in advance."},
@@ -495,8 +677,39 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"sustainable tourism",vi:"du lịch bền vững",ex:"Sustainable tourism protects local cultures."},
 {en:"package tour",vi:"tour trọn gói",ex:"We booked a package tour to Thailand."},
 {en:"boarding pass",vi:"thẻ lên máy bay",ex:"Please show your boarding pass."},
-{en:"round trip",vi:"khứ hồi",ex:"I booked a round-trip ticket."}
+{en:"round trip",vi:"khứ hồi",ex:"I booked a round-trip ticket."},
+{en:"visa",vi:"thị thực",ex:"You need a visa to enter that country.",col:"apply for/obtain a visa"},
+{en:"passport",vi:"hộ chiếu",ex:"Renew your passport before traveling."},
+{en:"transit",vi:"quá cảnh",ex:"We had a short transit in Dubai."},
+{en:"layover",vi:"thời gian chờ đổi chuyến bay",ex:"We had a three-hour layover in Singapore."},
+{en:"check-in",vi:"làm thủ tục nhận phòng / lên máy bay",ex:"Check-in opens two hours before departure."},
+{en:"hostel",vi:"nhà trọ giá rẻ cho khách du lịch",ex:"Young travelers often stay at hostels."},
+{en:"cruise",vi:"du lịch tàu biển",ex:"They went on a Mediterranean cruise."},
+{en:"currency exchange",vi:"đổi tiền",ex:"Currency exchange rates change daily."},
+{en:"travel insurance",vi:"bảo hiểm du lịch",ex:"Always buy travel insurance before you go."},
+{en:"guided tour",vi:"tour có hướng dẫn viên",ex:"A guided tour helped us understand the history."},
+{en:"off the beaten track",vi:"nơi ít người biết đến",ex:"They prefer destinations off the beaten track."},
+{en:"cultural immersion",vi:"đắm mình vào văn hóa địa phương",ex:"Cultural immersion deepens your travel experience."},
+{en:"natural wonder",vi:"kỳ quan thiên nhiên",ex:"Halong Bay is a natural wonder."},
+{en:"landmark",vi:"địa danh nổi tiếng",ex:"Big Ben is an iconic London landmark."},
+{en:"ecotourism",vi:"du lịch sinh thái",ex:"Ecotourism minimizes environmental impact."},
+{en:"mass tourism",vi:"du lịch đại trà",ex:"Mass tourism can damage fragile environments."},
+{en:"over-tourism",vi:"quá tải du lịch",ex:"Over-tourism is harming Venice's heritage."},
+{en:"stopover",vi:"điểm dừng trên đường",ex:"We made a stopover in Hong Kong."},
+{en:"complimentary",vi:"miễn phí / tặng kèm",ex:"Breakfast is complimentary at this hotel."},
+{en:"cancellation",vi:"hủy đặt",ex:"The flight cancellation caused delays.",col:"cancellation policy, flight cancellation"},
+{en:"exchange rate",vi:"tỷ giá hối đoái",ex:"Check the exchange rate before converting money."},
+{en:"travel advisory",vi:"khuyến cáo du lịch",ex:"The government issued a travel advisory."},
+{en:"quarantine",vi:"kiểm dịch",ex:"Travelers were placed in quarantine on arrival."},
+{en:"upgrade",vi:"nâng hạng",ex:"They were upgraded to business class."},
+{en:"local guide",vi:"hướng dẫn viên địa phương",ex:"A local guide enriched our experience."},
+{en:"pilgrimage",vi:"hành hương",ex:"Millions make a pilgrimage to Mecca each year."},
+{en:"departure lounge",vi:"phòng chờ khởi hành",ex:"We waited in the departure lounge."},
+{en:"ferry",vi:"phà",ex:"We crossed the river by ferry."},
+{en:"refund",vi:"hoàn tiền",ex:"She requested a refund after the cancellation."},
+{en:"itinerary",vi:"lịch trình du lịch chi tiết",ex:"The tour operator sent us a detailed itinerary."}
 ],mindmap:{"Holiday - Likes":["the scenery is magnificent → breathtaking views of the mountains and rivers, enjoy fresh and pure air","the local cuisine is fresh and delicious but not expensive → a variety of food: crab, lobsters, seashells","people are friendly, sociable, polite","enjoy many activities: swim in blue and clear seawater, sunbathing on the soft sand beach, play football, build sandcastles, watch the sunrise/sunset"]}},
+
 {id:"media",name:"Media",icon:"📰",color:"#ec4899",day:8,words:[
 {en:"broadcast",vi:"phát sóng",ex:"The news was broadcast live."},
 {en:"journalism",vi:"báo chí",ex:"Journalism plays a vital role in society."},
@@ -505,7 +718,7 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"advertisement",vi:"quảng cáo",ex:"The advertisement was very creative."},
 {en:"censorship",vi:"kiểm duyệt",ex:"Media censorship limits free speech."},
 {en:"influence",vi:"ảnh hưởng",ex:"The media has a huge influence on people."},
-{en:"biased",vi:"thiên vị",ex:"The report was biased towards one side."},
+{en:"biased",vi:"thiên vị / có thành kiến",ex:"The report was biased towards one side."},
 {en:"circulation",vi:"số phát hành",ex:"The newspaper has a wide circulation."},
 {en:"propaganda",vi:"tuyên truyền",ex:"Propaganda can be misleading."},
 {en:"press conference",vi:"họp báo",ex:"The president held a press conference."},
@@ -517,8 +730,39 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"freedom of speech",vi:"tự do ngôn luận",ex:"Freedom of speech is a basic right."},
 {en:"mainstream media",vi:"truyền thông chính thống",ex:"Mainstream media is losing trust."},
 {en:"viral",vi:"lan truyền",ex:"The video went viral overnight."},
-{en:"online platform",vi:"nền tảng trực tuyến",ex:"Many businesses use online platforms."}
+{en:"online platform",vi:"nền tảng trực tuyến",ex:"Many businesses use online platforms."},
+{en:"podcast",vi:"chương trình âm thanh trực tuyến",ex:"He hosts a popular weekly podcast."},
+{en:"influencer",vi:"người có ảnh hưởng trên mạng",ex:"Social media influencers shape consumer trends."},
+{en:"content creator",vi:"người tạo nội dung",ex:"Content creators earn money from advertising."},
+{en:"clickbait",vi:"tiêu đề giật gân để thu hút nhấp chuột",ex:"Clickbait headlines mislead readers."},
+{en:"trending",vi:"đang thịnh hành",ex:"The topic is trending on social media."},
+{en:"hashtag",vi:"thẻ hashtag",ex:"Use the right hashtag to reach more people."},
+{en:"anonymous",vi:"ẩn danh",ex:"The tip came from an anonymous source."},
+{en:"investigative journalism",vi:"báo chí điều tra",ex:"Investigative journalism uncovered the scandal."},
+{en:"media literacy",vi:"kiến thức truyền thông",ex:"Media literacy helps people identify fake news."},
+{en:"paywall",vi:"tường phí / giới hạn trả phí",ex:"The article is behind a paywall."},
+{en:"streaming platform",vi:"nền tảng phát trực tuyến",ex:"Streaming platforms are replacing cable TV."},
+{en:"tabloid",vi:"báo lá cải",ex:"Tabloids often publish sensational stories."},
+{en:"press freedom",vi:"tự do báo chí",ex:"Press freedom is essential in a democracy."},
+{en:"news anchor",vi:"người dẫn chương trình tin tức",ex:"She became a famous news anchor."},
+{en:"correspondent",vi:"phóng viên thường trú",ex:"Our foreign correspondent reports from Tokyo."},
+{en:"exclusive",vi:"tin độc quyền",ex:"The newspaper got an exclusive interview."},
+{en:"retraction",vi:"đính chính / rút lại bài báo",ex:"The magazine published a retraction."},
+{en:"commentary",vi:"bình luận",ex:"Political commentary shapes public opinion."},
+{en:"satire",vi:"văn châm biếm",ex:"The program uses satire to comment on politics."},
+{en:"media outlet",vi:"cơ quan truyền thông",ex:"Multiple media outlets covered the story."},
+{en:"readership",vi:"lượng độc giả",ex:"The magazine has a large readership."},
+{en:"public opinion",vi:"dư luận",ex:"Public opinion shifted after the report."},
+{en:"spin",vi:"bóp méo thông tin có chủ đích",ex:"Politicians sometimes put a spin on bad news."},
+{en:"eyewitness",vi:"nhân chứng",ex:"Eyewitness accounts differed significantly."},
+{en:"live report",vi:"tường thuật trực tiếp",ex:"She delivered a live report from the scene."},
+{en:"scoop",vi:"tin tức độc quyền quan trọng",ex:"The reporter got a major scoop."},
+{en:"broadsheet",vi:"báo uy tín khổ lớn",ex:"Broadsheets cover news in greater depth."},
+{en:"digital media",vi:"truyền thông kỹ thuật số",ex:"Digital media has changed how we consume news."},
+{en:"source",vi:"nguồn tin",ex:"Journalists must verify their sources."},
+{en:"breaking news",vi:"tin nóng / tin mới nhất",ex:"Breaking news interrupted the program."}
 ]},
+
 {id:"culture",name:"Culture",icon:"🎭",color:"#f59e0b",day:9,words:[
 {en:"custom",vi:"phong tục",ex:"Each country has different customs."},
 {en:"ceremony",vi:"lễ / nghi lễ",ex:"The wedding ceremony was beautiful."},
@@ -535,12 +779,44 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"assimilate",vi:"hòa nhập",ex:"Immigrants gradually assimilate into society."},
 {en:"norm",vi:"chuẩn mực",ex:"Social norms vary between cultures."},
 {en:"contemporary",vi:"đương đại",ex:"Contemporary art is always evolving."},
-{en:"festive",vi:"lễ hội",ex:"The festive atmosphere was wonderful."},
+{en:"festive",vi:"thuộc lễ hội",ex:"The festive atmosphere was wonderful."},
 {en:"traditional cuisine",vi:"ẩm thực truyền thống",ex:"Traditional cuisine attracts tourists."},
 {en:"intangible",vi:"phi vật thể",ex:"Intangible cultural heritage includes music."},
 {en:"indigenous",vi:"bản địa",ex:"Indigenous cultures are at risk."},
-{en:"commemorate",vi:"kỷ niệm",ex:"The event commemorates national heroes."}
+{en:"commemorate",vi:"kỷ niệm",ex:"The event commemorates national heroes."},
+{en:"tradition",vi:"truyền thống",ex:"This tradition dates back hundreds of years."},
+{en:"dialect",vi:"phương ngữ",ex:"Each region has its own dialect."},
+{en:"taboo",vi:"điều kiêng kỵ",ex:"In some cultures, discussing money is taboo."},
+{en:"mythology",vi:"thần thoại",ex:"Greek mythology is studied worldwide."},
+{en:"legend",vi:"truyền thuyết",ex:"The legend of the sword lake is well known."},
+{en:"oral tradition",vi:"truyền thống truyền miệng",ex:"Oral traditions pass stories between generations."},
+{en:"handicraft",vi:"đồ thủ công mỹ nghệ",ex:"Local handicrafts are sold at the market."},
+{en:"artisan",vi:"thợ thủ công",ex:"Skilled artisans made the pottery."},
+{en:"sculpture",vi:"điêu khắc / tác phẩm điêu khắc",ex:"The museum has an impressive sculpture collection."},
+{en:"mural",vi:"bức tranh tường",ex:"The mural depicts the city's history."},
+{en:"architecture",vi:"kiến trúc",ex:"French colonial architecture is still visible.",col:"traditional architecture"},
+{en:"calligraphy",vi:"thư pháp",ex:"Calligraphy is an ancient art form."},
+{en:"martial arts",vi:"võ thuật",ex:"He has practiced martial arts for ten years."},
+{en:"folk music",vi:"nhạc dân gian",ex:"Folk music reflects local history."},
+{en:"costume",vi:"trang phục truyền thống",ex:"The performers wore traditional costumes."},
+{en:"cultural exchange",vi:"giao lưu văn hóa",ex:"Cultural exchange programs build understanding."},
+{en:"westernization",vi:"tây phương hóa",ex:"Westernization has changed many local customs."},
+{en:"dynasty",vi:"triều đại",ex:"The Nguyen dynasty ruled for many years."},
+{en:"colonialism",vi:"chủ nghĩa thuộc địa",ex:"Colonialism had a lasting cultural impact."},
+{en:"nationalism",vi:"chủ nghĩa dân tộc",ex:"Nationalism shapes cultural policies."},
+{en:"fusion",vi:"pha trộn / hòa trộn văn hóa",ex:"Vietnamese-French fusion cuisine is popular."},
+{en:"values",vi:"giá trị / quan niệm",ex:"Each culture has its own set of values."},
+{en:"belief",vi:"tín ngưỡng",ex:"Religious beliefs shape cultural practices."},
+{en:"festival",vi:"lễ hội",ex:"Tet is the most important Vietnamese festival."},
+{en:"patron saint",vi:"vị thánh bảo hộ",ex:"Each craft village has a patron saint."},
+{en:"carnival",vi:"lễ hội hóa trang",ex:"The carnival attracts tourists from abroad."},
+{en:"pillar",vi:"trụ cột (văn hóa / xã hội)",ex:"Family is a cultural pillar in Vietnam."},
+{en:"cultural heritage",vi:"di sản văn hóa",ex:"We must protect our cultural heritage."},
+{en:"embody",vi:"thể hiện / thể hiện trong mình",ex:"The dance embodies the spirit of the community."},
+{en:"transmit",vi:"truyền lại",ex:"Stories are transmitted through generations."},
+{en:"revive",vi:"phục hồi / hồi sinh",ex:"Efforts are being made to revive ancient crafts."}
 ]},
+
 {id:"economy",name:"Economy",icon:"📊",color:"#14b8a6",day:10,words:[
 {en:"inflation",vi:"lạm phát",ex:"Inflation drives prices up."},
 {en:"recession",vi:"suy thoái",ex:"The economy entered a recession."},
@@ -561,8 +837,39 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"tax",vi:"thuế",ex:"Income tax rates vary by country."},
 {en:"economic growth",vi:"tăng trưởng kinh tế",ex:"Rapid economic growth is expected."},
 {en:"competitive advantage",vi:"lợi thế cạnh tranh",ex:"Innovation gives a competitive advantage."},
-{en:"market share",vi:"thị phần",ex:"The brand gained more market share."}
+{en:"market share",vi:"thị phần",ex:"The brand gained more market share."},
+{en:"interest rate",vi:"lãi suất",ex:"The central bank lowered interest rates.",col:"raise/lower interest rates"},
+{en:"exchange rate",vi:"tỷ giá hối đoái",ex:"A strong exchange rate hurts exports.",col:"fixed/floating exchange rate"},
+{en:"trade deficit",vi:"thâm hụt thương mại",ex:"The country has a large trade deficit."},
+{en:"trade surplus",vi:"thặng dư thương mại",ex:"Germany runs a trade surplus."},
+{en:"fiscal policy",vi:"chính sách tài khóa",ex:"Expansionary fiscal policy stimulates growth."},
+{en:"monetary policy",vi:"chính sách tiền tệ",ex:"Monetary policy controls inflation."},
+{en:"austerity",vi:"chính sách thắt lưng buộc bụng",ex:"Austerity measures reduced public spending."},
+{en:"tariff",vi:"thuế quan",ex:"High tariffs protect domestic industries.",col:"impose/reduce tariffs"},
+{en:"embargo",vi:"lệnh cấm vận",ex:"An embargo was placed on oil imports."},
+{en:"free trade",vi:"thương mại tự do",ex:"Free trade agreements boost exports."},
+{en:"multinational corporation",vi:"tập đoàn đa quốc gia",ex:"Multinational corporations operate globally."},
+{en:"outsourcing",vi:"thuê ngoài",ex:"Outsourcing lowers production costs."},
+{en:"microeconomics",vi:"kinh tế vi mô",ex:"Microeconomics studies individual firms."},
+{en:"macroeconomics",vi:"kinh tế vĩ mô",ex:"Macroeconomics focuses on national output."},
+{en:"debt",vi:"nợ",ex:"The national debt reached record levels.",col:"national debt, debt crisis"},
+{en:"mortgage",vi:"vay thế chấp",ex:"She took out a mortgage to buy a house."},
+{en:"dividend",vi:"cổ tức",ex:"Shareholders received strong dividends."},
+{en:"shareholder",vi:"cổ đông",ex:"Shareholders vote on major decisions."},
+{en:"asset",vi:"tài sản",ex:"Property is a valuable asset.",col:"fixed/liquid asset"},
+{en:"liability",vi:"nợ phải trả",ex:"Liabilities exceed assets in the balance sheet."},
+{en:"currency",vi:"tiền tệ",ex:"The local currency has weakened.",col:"foreign currency"},
+{en:"speculation",vi:"đầu cơ",ex:"Speculation in property drove prices up."},
+{en:"monopoly",vi:"độc quyền",ex:"The government broke up the monopoly.",col:"natural monopoly"},
+{en:"cost of living",vi:"chi phí sinh hoạt",ex:"The cost of living has risen sharply."},
+{en:"standard of living",vi:"mức sống",ex:"A higher standard of living requires more income."},
+{en:"loan",vi:"khoản vay",ex:"She repaid the bank loan on time."},
+{en:"privatization",vi:"tư nhân hóa",ex:"Privatization of utilities is controversial."},
+{en:"nationalization",vi:"quốc hữu hóa",ex:"Nationalization of banks occurred during the crisis."},
+{en:"austerity measures",vi:"biện pháp thắt chặt chi tiêu",ex:"Austerity measures cut social services."},
+{en:"oligopoly",vi:"thị trường độc quyền nhóm",ex:"The telecom industry is an oligopoly."}
 ]},
+
 {id:"transport",name:"Transport",icon:"🚗",color:"#0ea5e9",day:11,words:[
 {en:"traffic congestion",vi:"tắc nghẽn giao thông",ex:"Traffic congestion is a daily problem."},
 {en:"public transportation",vi:"giao thông công cộng",ex:"Public transportation should be improved."},
@@ -583,8 +890,39 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"metro",vi:"tàu điện ngầm",ex:"The metro system is very efficient."},
 {en:"urban planning",vi:"quy hoạch đô thị",ex:"Good urban planning improves quality of life."},
 {en:"green space",vi:"không gian xanh",ex:"Cities need more green spaces."},
-{en:"housing crisis",vi:"khủng hoảng nhà ở",ex:"The housing crisis affects young people."}
+{en:"housing crisis",vi:"khủng hoảng nhà ở",ex:"The housing crisis affects young people."},
+{en:"roundabout",vi:"vòng xuyến",ex:"Drive slowly around the roundabout."},
+{en:"overpass",vi:"cầu vượt",ex:"The overpass reduces intersection traffic."},
+{en:"underpass",vi:"hầm chui",ex:"The underpass connects the two districts."},
+{en:"traffic light",vi:"đèn giao thông",ex:"Wait for the traffic light to turn green."},
+{en:"speed limit",vi:"giới hạn tốc độ",ex:"The speed limit here is 60 km/h.",col:"exceed the speed limit"},
+{en:"seat belt",vi:"dây an toàn",ex:"Always wear your seat belt.",col:"fasten a seat belt"},
+{en:"road accident",vi:"tai nạn đường bộ",ex:"Road accidents claim thousands of lives."},
+{en:"drunk driving",vi:"lái xe say rượu",ex:"Drunk driving is a criminal offense."},
+{en:"cycling lane",vi:"làn đường xe đạp",ex:"More cycling lanes encourage eco-friendly travel."},
+{en:"electric bus",vi:"xe buýt điện",ex:"Electric buses reduce city air pollution."},
+{en:"high-speed rail",vi:"đường sắt tốc độ cao",ex:"High-speed rail connects major cities quickly."},
+{en:"logistics",vi:"hậu cần / logistics",ex:"Efficient logistics reduce delivery time."},
+{en:"congestion charge",vi:"phí chống tắc đường",ex:"A congestion charge discourages driving in the city."},
+{en:"autonomous vehicle",vi:"xe tự lái",ex:"Autonomous vehicles may reduce accidents."},
+{en:"mobility",vi:"khả năng di chuyển",ex:"Good transport improves social mobility."},
+{en:"connectivity",vi:"kết nối giao thông",ex:"Connectivity between cities needs improvement."},
+{en:"transport network",vi:"mạng lưới giao thông",ex:"The transport network needs modernization."},
+{en:"road maintenance",vi:"bảo trì đường bộ",ex:"Road maintenance prevents accidents."},
+{en:"transit hub",vi:"trung tâm trung chuyển",ex:"The airport is a major transit hub."},
+{en:"pedestrian zone",vi:"khu vực đi bộ",ex:"The pedestrian zone has reduced pollution."},
+{en:"road rage",vi:"tức giận khi lái xe",ex:"Road rage leads to dangerous behavior."},
+{en:"detour",vi:"đường vòng",ex:"We had to take a detour due to roadworks."},
+{en:"traffic flow",vi:"luồng giao thông",ex:"Traffic flow improved after road widening."},
+{en:"freight",vi:"hàng hóa vận chuyển",ex:"Freight is transported by road and rail.",col:"freight train, air freight"},
+{en:"cable car",vi:"cáp treo",ex:"The cable car offers panoramic views."},
+{en:"harbor",vi:"cảng / bến cảng",ex:"Ships unload goods at the harbor."},
+{en:"airport",vi:"sân bay",ex:"The new airport has modern facilities."},
+{en:"ferry terminal",vi:"bến phà",ex:"The ferry terminal is near the city center."},
+{en:"park and ride",vi:"gửi xe và đi xe buýt",ex:"Park and ride reduces city centre traffic."},
+{en:"designated driver",vi:"người được chỉ định lái xe",ex:"One person volunteered as designated driver."}
 ],mindmap:{"Advantages (private transport)":["be safer → have fewer accidents","never think about the weather: rain, storm, sun, dark at night; avoid getting wet, dust","feel comfortable and relaxed → listen to music, read books, take a nap","be convenient and fast → travel wherever I want and whenever I want"],"Disadvantages (public transport)":["be inconvenient: run slowly (transport infrastructure is in bad conditions), wait such a long time for the bus","have a higher chance of getting diseases","be pretty crowded at rush hours","public transport systems are quite bad"],"City Disadvantages":["environment is heavily polluted: polluted air, fewer trees; heavy traffic; bad road conditions","the cost of living is expensive → spend more money","city life is more dangerous: more crimes, social evils (drinking, drug, gambling)"],"City Advantages":["city life is interesting → many entertainments: restaurants, parks, cinemas","city life is more convenient → live near hospitals, supermarkets, schools","have higher incomes → save more money, buy what I like","have more career opportunities"],"Countryside Benefits":["bring a clean environment: fresher air, many trees, rice fields, rivers","the cost of living is cheap → save a lot of money","people are more friendly, opener → live near each other, meet and talk everyday"],"Countryside Drawbacks":["have lower incomes","life is boring → not have many places of conveniences and pleasures"]}},
+
 {id:"entertainment",name:"Entertainment",icon:"🎬",color:"#a855f7",day:12,words:[
 {en:"leisure",vi:"thời gian rảnh",ex:"What do you do in your leisure time?"},
 {en:"recreation",vi:"giải trí",ex:"The park offers many recreational activities."},
@@ -605,8 +943,39 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"amateur",vi:"nghiệp dư",ex:"He started as an amateur photographer."},
 {en:"celebrity",vi:"người nổi tiếng",ex:"Celebrities influence young people."},
 {en:"trend",vi:"xu hướng",ex:"Fashion trends change every season."},
-{en:"participate",vi:"tham gia",ex:"They participated in the charity event."}
+{en:"participate",vi:"tham gia",ex:"They participated in the charity event."},
+{en:"amusement park",vi:"công viên giải trí",ex:"Children love going to amusement parks."},
+{en:"stand-up comedy",vi:"hài độc thoại",ex:"His stand-up comedy show sold out quickly."},
+{en:"live concert",vi:"buổi hòa nhạc trực tiếp",ex:"The live concert attracted thousands of fans."},
+{en:"documentary",vi:"phim tài liệu",ex:"The documentary won many awards."},
+{en:"animation",vi:"phim hoạt hình",ex:"The animation studio produces world-class content."},
+{en:"soundtrack",vi:"nhạc phim",ex:"The film's soundtrack was very popular."},
+{en:"choreography",vi:"biên đạo múa",ex:"The choreography was stunning."},
+{en:"plot",vi:"cốt truyện",ex:"The plot of the novel is very complex."},
+{en:"cast",vi:"dàn diễn viên",ex:"The cast included several famous actors."},
+{en:"screenplay",vi:"kịch bản phim",ex:"She wrote the screenplay for the film."},
+{en:"esports",vi:"thể thao điện tử",ex:"Esports tournaments attract huge audiences."},
+{en:"subscription",vi:"đăng ký dịch vụ / gói thuê bao",ex:"A monthly subscription gives full access.",col:"annual subscription"},
+{en:"on-demand",vi:"theo yêu cầu",ex:"On-demand viewing has replaced scheduled TV."},
+{en:"ratings",vi:"xếp hạng / đánh giá",ex:"The show received excellent ratings."},
+{en:"sequel",vi:"phần tiếp theo",ex:"The sequel was even better than the original."},
+{en:"prequel",vi:"phần tiền truyện",ex:"The prequel explains the character's backstory."},
+{en:"critic",vi:"nhà phê bình",ex:"Critics gave the film mixed reviews."},
+{en:"nomination",vi:"đề cử",ex:"She received an Oscar nomination."},
+{en:"award ceremony",vi:"lễ trao giải",ex:"The award ceremony was broadcast live."},
+{en:"box office",vi:"phòng vé / doanh thu phim",ex:"The film broke box office records.",col:"box office hit"},
+{en:"fan base",vi:"cộng đồng người hâm mộ",ex:"The singer has a loyal fan base."},
+{en:"merchandise",vi:"hàng lưu niệm thương hiệu",ex:"Official merchandise is sold at the event."},
+{en:"gallery",vi:"phòng trưng bày nghệ thuật",ex:"The gallery displays modern art."},
+{en:"orchestra",vi:"dàn nhạc giao hưởng",ex:"The national orchestra performed brilliantly."},
+{en:"debut",vi:"ra mắt lần đầu",ex:"The band's debut album was a huge success."},
+{en:"spin-off",vi:"nhánh phái sinh từ tác phẩm gốc",ex:"The TV spin-off was very popular."},
+{en:"virtual concert",vi:"hòa nhạc trực tuyến",ex:"The artist held a virtual concert during lockdown."},
+{en:"multiplayer",vi:"nhiều người chơi",ex:"This multiplayer game is very popular."},
+{en:"theme park",vi:"công viên chủ đề",ex:"The theme park offers thrilling rides."},
+{en:"jam session",vi:"buổi chơi nhạc ngẫu hứng",ex:"They held an informal jam session after dinner."}
 ],mindmap:{"Hobbies - Synonyms":["free time activities, leisure activities"],"Types":["listening to music, reading books, watching films","playing sports: swimming, tennis, table tennis, football; go jogging","go shopping"],"Advantages":["bring happiness to me and my family → make me relaxed/feel much happier","talk and share the joy with others","reduce the stress of everyday hard work and study","develop imagination and creativity","broaden the knowledge","develop the cognitive skills"],"Disadvantages (gaming)":["games contain a great deal of violence","increase aggressive feelings, thoughts and behaviors","not focus on their duties and study → perform worse and worse at school"],"Solutions (gaming)":["choose suitable computer games","be not allowed to play violent games","set limits on the length of time for playing games"]}},
+
 {id:"family",name:"Family",icon:"👨‍👩‍👧‍👦",color:"#f43f5e",day:13,words:[
 {en:"upbringing",vi:"cách nuôi dạy",ex:"Her upbringing shaped her character."},
 {en:"sibling",vi:"anh chị em",ex:"She has two siblings."},
@@ -627,8 +996,39 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"compromise",vi:"thỏa hiệp",ex:"Relationships require compromise."},
 {en:"empathy",vi:"sự đồng cảm",ex:"Empathy is key to understanding others."},
 {en:"elderly",vi:"người cao tuổi",ex:"The elderly need special care."},
-{en:"adolescence",vi:"tuổi vị thành niên",ex:"Adolescence is a challenging period."}
+{en:"adolescence",vi:"tuổi vị thành niên",ex:"Adolescence is a challenging period."},
+{en:"guardian",vi:"người giám hộ",ex:"The court appointed a guardian for the child."},
+{en:"custody",vi:"quyền nuôi con",ex:"She was granted full custody of the children."},
+{en:"adoption",vi:"nhận nuôi",ex:"They chose adoption to start their family."},
+{en:"inheritance",vi:"thừa kế",ex:"He received a large inheritance from his uncle."},
+{en:"discipline",vi:"kỷ luật",ex:"Consistent discipline helps children develop.",col:"maintain discipline"},
+{en:"boundaries",vi:"ranh giới / giới hạn",ex:"Setting boundaries is healthy in relationships."},
+{en:"communication",vi:"giao tiếp",ex:"Good communication prevents misunderstandings.",col:"open communication"},
+{en:"trust",vi:"niềm tin",ex:"Trust is the foundation of every relationship."},
+{en:"affection",vi:"tình cảm yêu thương",ex:"Children need affection to develop well."},
+{en:"household chores",vi:"việc nhà",ex:"Household chores should be shared equally."},
+{en:"quality time",vi:"thời gian chất lượng bên nhau",ex:"Spending quality time with family strengthens bonds."},
+{en:"family values",vi:"giá trị gia đình",ex:"Strong family values guide children's behavior."},
+{en:"overprotective",vi:"bảo bọc quá mức",ex:"Overprotective parents limit children's independence."},
+{en:"helicopter parent",vi:"cha mẹ kiểm soát thái quá",ex:"Helicopter parents hover over every decision."},
+{en:"sibling rivalry",vi:"cạnh tranh giữa anh chị em",ex:"Sibling rivalry is normal but must be managed."},
+{en:"milestone",vi:"cột mốc quan trọng",ex:"Learning to walk is a major developmental milestone."},
+{en:"puberty",vi:"tuổi dậy thì",ex:"Puberty brings significant physical changes."},
+{en:"curfew",vi:"giờ giới nghiêm / giờ về nhà",ex:"She has a curfew of 10 PM."},
+{en:"allowance",vi:"tiền tiêu vặt",ex:"He receives a weekly allowance.",col:"pocket money"},
+{en:"breadwinner",vi:"trụ cột kinh tế gia đình",ex:"He is the main breadwinner in the family."},
+{en:"caregiver",vi:"người chăm sóc",ex:"She works as a caregiver for the elderly."},
+{en:"domestic violence",vi:"bạo lực gia đình",ex:"Domestic violence is a serious social issue."},
+{en:"blended family",vi:"gia đình ghép",ex:"Blended families face unique challenges."},
+{en:"in-laws",vi:"gia đình bên chồng / vợ",ex:"She has a good relationship with her in-laws."},
+{en:"parenting style",vi:"phong cách nuôi dạy con",ex:"Parenting style greatly affects child development."},
+{en:"emotional support",vi:"hỗ trợ tinh thần",ex:"Emotional support from family is invaluable."},
+{en:"responsibility",vi:"trách nhiệm",ex:"Taking responsibility builds character.",col:"family responsibility"},
+{en:"authoritative",vi:"cha mẹ dân chủ có kỷ luật",ex:"Authoritative parents balance rules with warmth."},
+{en:"permissive",vi:"dễ dãi",ex:"Permissive parenting can lead to lack of discipline."},
+{en:"authoritarian",vi:"độc đoán / nghiêm khắc",ex:"Authoritarian parents have very strict rules."}
 ],mindmap:{"Describe a Person - Appearance":["Tall, short, old, young, medium-height, middle-aged","beautiful, pretty, handsome, good-looking","have short/long black hair","have a sunny smile"],"Good Characters":["sincere = honest (thật thà)","helpful, kind, nice","generous (hào phóng)"],"Bad Characters":["talkative","awful, terrible, bad","selfish (ích kỷ)"],"Relationship":["we have known each other for 10 years","we first met at high school / at the company"],"Common Activities":["often meet at the coffee shop","go shopping together","talk and share with each other about life, study, work, family"],"House/Flat":["Rooms: living room, bedroom, bathroom, garden, garage, balcony, toilet","Adjectives: large, spacious, quiet, peaceful, pretty, stuffy (ngột ngạt), drafty (nhiều gió lùa), cramped (chật chội)","Furniture: table, TV, sofa, bookshelf, bed, wardrobe","Activities: grow plants and flowers in the garden, read books, watch TV, welcome guests"]}},
+
 {id:"food",name:"Food & Shopping",icon:"🛒",color:"#84cc16",day:14,words:[
 {en:"organic food",vi:"thực phẩm hữu cơ",ex:"Organic food is healthier."},
 {en:"processed food",vi:"thực phẩm chế biến sẵn",ex:"Processed food contains many additives."},
@@ -649,14 +1049,90 @@ mindmap:{"Crime - Causes":["not be nurtured with love, care and support → pare
 {en:"defective",vi:"bị lỗi",ex:"The product was defective."},
 {en:"exchange",vi:"đổi hàng",ex:"Can I exchange this for a larger size?"},
 {en:"cashier",vi:"thu ngân",ex:"Pay at the cashier."},
-{en:"affordable",vi:"có thể chi trả được",ex:"The restaurant is affordable for students."}
+{en:"affordable",vi:"có thể chi trả được",ex:"The restaurant is affordable for students."},
+{en:"nutrition label",vi:"nhãn dinh dưỡng",ex:"Check the nutrition label before buying."},
+{en:"calorie intake",vi:"lượng calo tiêu thụ",ex:"Reduce your daily calorie intake."},
+{en:"food additive",vi:"phụ gia thực phẩm",ex:"Food additives extend shelf life."},
+{en:"preservative",vi:"chất bảo quản",ex:"Preservatives keep food fresh longer."},
+{en:"vegan",vi:"ăn thuần chay",ex:"She follows a vegan diet.",col:"go vegan, vegan diet"},
+{en:"vegetarian",vi:"ăn chay",ex:"He became vegetarian for health reasons."},
+{en:"gluten-free",vi:"không chứa gluten",ex:"We offer gluten-free options."},
+{en:"fast food",vi:"thức ăn nhanh",ex:"Fast food is convenient but often unhealthy."},
+{en:"street food",vi:"thức ăn đường phố",ex:"Vietnamese street food is world-famous."},
+{en:"fine dining",vi:"ẩm thực cao cấp",ex:"They celebrated at a fine dining restaurant."},
+{en:"takeaway",vi:"đồ ăn mang về",ex:"I ordered a takeaway for dinner."},
+{en:"delivery service",vi:"dịch vụ giao hàng",ex:"Many restaurants now offer delivery service."},
+{en:"food waste",vi:"lãng phí thực phẩm",ex:"Food waste is a global problem."},
+{en:"expiry date",vi:"ngày hết hạn",ex:"Check the expiry date before eating.",col:"best before date"},
+{en:"shelf life",vi:"hạn sử dụng",ex:"Frozen foods have a longer shelf life."},
+{en:"retail",vi:"bán lẻ",ex:"Online retail is growing rapidly.",col:"retail store, retail price"},
+{en:"wholesale",vi:"bán sỉ",ex:"They buy goods at wholesale prices."},
+{en:"loyalty card",vi:"thẻ khách hàng thân thiết",ex:"Use your loyalty card to earn points."},
+{en:"impulse buying",vi:"mua sắm bốc đồng",ex:"Supermarkets are designed to encourage impulse buying."},
+{en:"online shopping",vi:"mua sắm trực tuyến",ex:"Online shopping offers great convenience."},
+{en:"counterfeit",vi:"hàng giả",ex:"Counterfeit goods are illegal.",col:"counterfeit product"},
+{en:"price tag",vi:"thẻ giá",ex:"The price tag was missing from the item."},
+{en:"checkout",vi:"quầy thanh toán",ex:"Please proceed to the checkout."},
+{en:"shopping cart",vi:"giỏ hàng",ex:"Add items to your shopping cart."},
+{en:"installment",vi:"trả góp",ex:"You can pay in monthly installments.",col:"pay in installments"},
+{en:"credit card",vi:"thẻ tín dụng",ex:"She paid by credit card.",col:"credit card payment"},
+{en:"outlet",vi:"cửa hàng giảm giá",ex:"Factory outlets sell branded goods cheaply."},
+{en:"lactose intolerant",vi:"không dung nạp lactose",ex:"She is lactose intolerant and avoids dairy."},
+{en:"menu",vi:"thực đơn",ex:"The restaurant has a wide menu."},
+{en:"complain",vi:"khiếu nại",ex:"He complained about the poor service."}
 ]},
+
 {id:"languages",name:"Languages",icon:"🌐",color:"#0891b2",day:0,words:[
 {en:"bilingual",vi:"song ngữ",ex:"She is bilingual in English and Vietnamese."},
 {en:"fluent",vi:"thông thạo",ex:"He speaks fluent English."},
 {en:"interpreter",vi:"phiên dịch viên",ex:"She works as an interpreter."},
 {en:"native speaker",vi:"người bản ngữ",ex:"Practice with a native speaker."},
-{en:"pronunciation",vi:"phát âm",ex:"Good pronunciation is important."}
+{en:"pronunciation",vi:"phát âm",ex:"Good pronunciation is important."},
+{en:"vocabulary",vi:"từ vựng",ex:"Building vocabulary takes time and effort."},
+{en:"grammar",vi:"ngữ pháp",ex:"Correct grammar is essential in writing."},
+{en:"accent",vi:"giọng",ex:"She has a strong regional accent."},
+{en:"dialect",vi:"phương ngữ",ex:"Each region has a distinct dialect."},
+{en:"mother tongue",vi:"tiếng mẹ đẻ",ex:"Her mother tongue is Vietnamese."},
+{en:"second language",vi:"ngôn ngữ thứ hai",ex:"English is her second language."},
+{en:"foreign language",vi:"ngoại ngữ",ex:"Learning a foreign language opens many doors."},
+{en:"immersion",vi:"đắm mình vào ngôn ngữ",ex:"Language immersion accelerates learning."},
+{en:"language barrier",vi:"rào cản ngôn ngữ",ex:"Language barriers hinder communication."},
+{en:"multilingual",vi:"đa ngôn ngữ",ex:"He is multilingual, speaking four languages."},
+{en:"linguist",vi:"nhà ngôn ngữ học",ex:"The linguist studied ancient scripts."},
+{en:"linguistics",vi:"ngôn ngữ học",ex:"She majored in linguistics at university."},
+{en:"translation",vi:"dịch thuật",ex:"Accurate translation requires cultural knowledge."},
+{en:"phrase",vi:"cụm từ",ex:"Learn useful phrases before traveling."},
+{en:"idiom",vi:"thành ngữ",ex:"English idioms can be confusing for learners."},
+{en:"slang",vi:"tiếng lóng",ex:"Young people use a lot of slang."},
+{en:"formal language",vi:"ngôn ngữ trang trọng",ex:"Use formal language in official letters."},
+{en:"colloquial",vi:"thông thường / không trang trọng",ex:"This expression is very colloquial."},
+{en:"proficiency",vi:"trình độ thành thạo",ex:"She has high proficiency in Chinese.",col:"language proficiency, level of proficiency"},
+{en:"beginner",vi:"người mới học",ex:"This book is suitable for beginners."},
+{en:"intermediate",vi:"trung cấp",ex:"She is at an intermediate level."},
+{en:"advanced",vi:"nâng cao",ex:"The advanced class is very challenging."},
+{en:"language acquisition",vi:"tiếp thu ngôn ngữ",ex:"Children naturally excel at language acquisition."},
+{en:"communicate",vi:"giao tiếp",ex:"She can communicate effectively in three languages."},
+{en:"comprehension",vi:"sự hiểu biết",ex:"Reading comprehension improves with practice."},
+{en:"self-study",vi:"tự học",ex:"Self-study requires strong motivation.",col:"self-study method"},
+{en:"language course",vi:"khóa học ngôn ngữ",ex:"She enrolled in an online language course."},
+{en:"certificate",vi:"chứng chỉ",ex:"He obtained a language certificate.",col:"language certificate"},
+{en:"memorize",vi:"ghi nhớ",ex:"It takes time to memorize new vocabulary."},
+{en:"repetition",vi:"lặp đi lặp lại",ex:"Repetition is key to long-term retention."},
+{en:"review",vi:"ôn tập",ex:"Review your notes regularly."},
+{en:"consistent",vi:"kiên trì / nhất quán",ex:"Consistent practice leads to improvement."},
+{en:"motivate",vi:"thúc đẩy / tạo động lực",ex:"A good teacher motivates students to learn."},
+{en:"syntax",vi:"cú pháp",ex:"Understanding syntax helps with sentence structure."},
+{en:"context",vi:"ngữ cảnh",ex:"Guess the meaning of words from context."},
+{en:"interact",vi:"tương tác",ex:"Interact with native speakers as much as possible."},
+{en:"converse",vi:"trò chuyện",ex:"She loves to converse in different languages."},
+{en:"express",vi:"bày tỏ / diễn đạt",ex:"It is hard to express subtle emotions in a new language."},
+{en:"reading skill",vi:"kỹ năng đọc",ex:"Strong reading skills help in all subjects."},
+{en:"writing skill",vi:"kỹ năng viết",ex:"Good writing skills are valued by employers."},
+{en:"speaking skill",vi:"kỹ năng nói",ex:"Speaking skills improve through practice."},
+{en:"listening skill",vi:"kỹ năng nghe",ex:"Listening skills develop through exposure."},
+{en:"language exchange",vi:"trao đổi ngôn ngữ",ex:"Language exchange helps both speakers practice."},
+{en:"fluency",vi:"sự thông thạo",ex:"Fluency develops with daily practice.",col:"achieve fluency"},
+{en:"paraphrase",vi:"diễn giải lại",ex:"Paraphrase the sentence using different words."}
 ],mindmap:{"Benefits":["helps us learn and get information in the world → many books are written in English","helps us feel more confident when travelling abroad → talk easily with foreigners; work and do business without an interpreter","learn more about that country → culture, people, society, customs and traditions","become friends with many people around the world","open a new door to the world"]}}
 ];
 
@@ -669,6 +1145,63 @@ const LINKING=[
 {cat:"Nguyên nhân — Kết quả",icon:"🔄",items:["Because of / Due to / Owing to / As a result of","Therefore / Consequently / As a consequence / Thus / Hence","This leads to / This results in / This gives rise to"]},
 {cat:"Kết luận",icon:"🎯",items:["In conclusion / To sum up / All things considered","Taking everything into account / On the whole","In summary / To conclude"]},
 {cat:"So sánh",icon:"🔀",items:["Similarly / Likewise / In the same way","Compared to / In comparison with"]}
+];
+
+// ===== LINKING PRACTICE DATA =====
+const LINKING_PRACTICE=[
+{en:"In my opinion",vi:"Theo ý kiến của tôi...",cat:"💬 Nêu ý kiến"},
+{en:"In my view",vi:"Theo quan điểm của tôi...",cat:"💬 Nêu ý kiến"},
+{en:"From my perspective",vi:"Từ góc nhìn của tôi...",cat:"💬 Nêu ý kiến"},
+{en:"I firmly believe that",vi:"Tôi tin chắc rằng... (nhấn mạnh)",cat:"💬 Nêu ý kiến"},
+{en:"I am convinced that",vi:"Tôi hoàn toàn tin rằng...",cat:"💬 Nêu ý kiến"},
+{en:"As far as I am concerned",vi:"Về phần tôi thì... (trang trọng)",cat:"💬 Nêu ý kiến"},
+{en:"It seems to me that",vi:"Có vẻ như với tôi là...",cat:"💬 Nêu ý kiến"},
+{en:"Furthermore",vi:"Hơn nữa / Thêm vào đó (bổ sung ý mạnh)",cat:"➕ Bổ sung ý"},
+{en:"Moreover",vi:"Hơn thế nữa (bổ sung ý rất mạnh)",cat:"➕ Bổ sung ý"},
+{en:"In addition",vi:"Ngoài ra... (bổ sung)",cat:"➕ Bổ sung ý"},
+{en:"Besides",vi:"Bên cạnh đó...",cat:"➕ Bổ sung ý"},
+{en:"What is more",vi:"Điều quan trọng hơn nữa là...",cat:"➕ Bổ sung ý"},
+{en:"Not only but also",vi:"Không chỉ... mà còn... (cấu trúc song song)",cat:"➕ Bổ sung ý"},
+{en:"On top of that",vi:"Thêm vào đó / Hơn nữa (thông dụng)",cat:"➕ Bổ sung ý"},
+{en:"For example",vi:"Ví dụ (trang trọng nhất)",cat:"💡 Đưa ví dụ"},
+{en:"For instance",vi:"Chẳng hạn như...",cat:"💡 Đưa ví dụ"},
+{en:"To illustrate",vi:"Để minh họa điều này...",cat:"💡 Đưa ví dụ"},
+{en:"Such as",vi:"Chẳng hạn như... (liệt kê ví dụ)",cat:"💡 Đưa ví dụ"},
+{en:"However",vi:"Tuy nhiên... (đối lập trực tiếp)",cat:"⚖️ Đối lập"},
+{en:"Nevertheless",vi:"Dù vậy... (nhượng bộ nhưng giữ quan điểm)",cat:"⚖️ Đối lập"},
+{en:"Nonetheless",vi:"Mặc dù vậy... (= nevertheless, trang trọng hơn)",cat:"⚖️ Đối lập"},
+{en:"On the other hand",vi:"Mặt khác... (so sánh hai phía)",cat:"⚖️ Đối lập"},
+{en:"In contrast",vi:"Ngược lại... (đối lập rõ ràng)",cat:"⚖️ Đối lập"},
+{en:"Conversely",vi:"Trái lại... (đảo ngược hoàn toàn)",cat:"⚖️ Đối lập"},
+{en:"Although",vi:"Mặc dù... (+ mệnh đề, nhượng bộ)",cat:"⚖️ Đối lập"},
+{en:"Even though",vi:"Cho dù... (nhấn mạnh hơn although)",cat:"⚖️ Đối lập"},
+{en:"Despite",vi:"Mặc dù... (+ danh từ / V-ing)",cat:"⚖️ Đối lập"},
+{en:"In spite of",vi:"Mặc dù... (= despite, cùng cấu trúc)",cat:"⚖️ Đối lập"},
+{en:"While it is true that",vi:"Dù đúng là... nhưng... (nhượng bộ rồi phản bác)",cat:"⚖️ Đối lập"},
+{en:"Because of",vi:"Bởi vì / Do... (+ danh từ, nguyên nhân)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"Due to",vi:"Do / Vì... (+ danh từ, nguyên nhân trực tiếp)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"Owing to",vi:"Nhờ / Do... (nguyên nhân tích cực hoặc tiêu cực)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"As a result of",vi:"Kết quả của / Do... (nguyên nhân)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"Therefore",vi:"Do đó / Vì vậy... (kết quả, trang trọng)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"Consequently",vi:"Kết quả là... (hậu quả tự nhiên)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"As a consequence",vi:"Như là hệ quả...",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"Thus",vi:"Do đó... (trang trọng, văn viết)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"Hence",vi:"Vì vậy / Do đó... (rất trang trọng)",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"This leads to",vi:"Điều này dẫn đến...",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"This results in",vi:"Điều này tạo ra kết quả là...",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"This gives rise to",vi:"Điều này làm phát sinh...",cat:"🔄 Nguyên nhân — Kết quả"},
+{en:"In conclusion",vi:"Để kết luận... (mở đầu kết luận bài viết)",cat:"🎯 Kết luận"},
+{en:"To sum up",vi:"Tóm lại...",cat:"🎯 Kết luận"},
+{en:"All things considered",vi:"Xét tất cả mọi thứ... (cân nhắc toàn diện)",cat:"🎯 Kết luận"},
+{en:"Taking everything into account",vi:"Xem xét tất cả mọi điều...",cat:"🎯 Kết luận"},
+{en:"On the whole",vi:"Nhìn chung...",cat:"🎯 Kết luận"},
+{en:"In summary",vi:"Tóm tắt lại...",cat:"🎯 Kết luận"},
+{en:"To conclude",vi:"Kết lại...",cat:"🎯 Kết luận"},
+{en:"Similarly",vi:"Tương tự (so sánh điểm giống nhau)",cat:"🔀 So sánh"},
+{en:"Likewise",vi:"Cũng như vậy...",cat:"🔀 So sánh"},
+{en:"In the same way",vi:"Theo cách tương tự...",cat:"🔀 So sánh"},
+{en:"Compared to",vi:"So với...",cat:"🔀 So sánh"},
+{en:"In comparison with",vi:"Khi so sánh với...",cat:"🔀 So sánh"}
 ];
 
 // ===== READING TYPES DATA =====
@@ -717,6 +1250,7 @@ const SCHED=[
 
 // ==================== STATE ====================
 let S={learned:0,correct:0,total:0,fcTopic:'all',fcIdx:0,fcDeck:[],wrTopic:'all',wrIdx:0,wrDeck:[],wrC:0,wrW:0,wrS:0,curTopic:null};
+let LP={deck:[],idx:0,c:0,w:0,s:0,cat:'all'};
 
 // ==================== INIT ====================
 function init(){
@@ -749,6 +1283,130 @@ if(cbName==='wr'){S.wrTopic=val;initWR();}
 function renderLinking(){
 document.getElementById('linkingContent').innerHTML=LINKING.map(l=>`<div class="ref-card"><h4>${l.icon} ${l.cat}</h4><ul>${l.items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`).join('');
 }
+
+// ===== LINKING VIEW TOGGLE =====
+function linkingView(v,btn){
+btn.parentNode.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+btn.classList.add('active');
+const listEl=document.getElementById('linkingContent');
+const practiceEl=document.getElementById('linkingPracticeWrap');
+if(v==='list'){
+  listEl.style.display='block';
+  practiceEl.style.display='none';
+}else{
+  listEl.style.display='none';
+  practiceEl.style.display='block';
+  initLinkingPractice();
+}
+}
+
+// ===== LINKING PRACTICE =====
+function initLinkingPractice(){
+const cats=['all',...new Set(LINKING_PRACTICE.map(x=>x.cat))];
+const catHtml=cats.map(c=>`<button class="tab${LP.cat===c?' active':''}" onclick="lpFilterCat('${c.replace(/'/g,"\\'").replace(/"/g,'\\"')}',this)">${c==='all'?'🔤 Tất cả':c}</button>`).join('');
+LP.deck=shuffle([...LINKING_PRACTICE]);
+LP.idx=0;LP.c=0;LP.w=0;LP.s=0;
+document.getElementById('linkingPracticeWrap').innerHTML=`
+<div style="margin-bottom:16px">
+  <p style="font-size:12px;color:var(--text3);margin-bottom:10px">Đọc nghĩa tiếng Việt → gõ cụm từ nối tiếng Anh. <span class="kbd">Enter</span> kiểm tra.</p>
+  <div class="tabs" style="flex-wrap:wrap" id="lpCats">${catHtml}</div>
+</div>
+<div class="wr-wrap">
+  <div class="wr-score">
+    <div><div class="num" id="lpC" style="color:var(--green)">0</div><div class="lbl">Đúng</div></div>
+    <div><div class="num" id="lpW" style="color:var(--red)">0</div><div class="lbl">Sai</div></div>
+    <div><div class="num" id="lpS" style="color:var(--orange)">0</div><div class="lbl">Streak</div></div>
+  </div>
+  <div class="wr-prompt">
+    <div style="font-size:11px;font-weight:700;color:var(--accent2);margin-bottom:8px;letter-spacing:1px;text-transform:uppercase" id="lpCatLabel"></div>
+    <div class="mean" id="lpMean">—</div>
+    <div class="hint" id="lpHint"></div>
+  </div>
+  <input type="text" class="wr-input" id="lpInput" placeholder="Gõ cụm từ nối tiếng Anh..." autocomplete="off">
+  <div class="wr-fb" id="lpFb"></div>
+  <div style="display:flex;gap:10px;justify-content:center">
+    <button class="btn" onclick="lpShowAns()">Xem đáp án</button>
+    <button class="btn primary" onclick="lpCheck()">Kiểm tra ↵</button>
+  </div>
+</div>`;
+setTimeout(function(){
+  var el=document.getElementById('lpInput');
+  if(el){el.addEventListener('keydown',function(e){if(e.key==='Enter')lpCheck();});el.focus();}
+  lpUpdateCard();
+},50);
+}
+
+function lpFilterCat(cat,btn){
+LP.cat=cat;
+if(btn&&btn.parentNode)btn.parentNode.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+if(btn)btn.classList.add('active');
+var filtered=cat==='all'?[...LINKING_PRACTICE]:LINKING_PRACTICE.filter(x=>x.cat===cat);
+LP.deck=shuffle(filtered);
+LP.idx=0;LP.c=0;LP.w=0;LP.s=0;
+lpUpdateCard();
+}
+
+function lpUpdateCard(){
+if(!LP.deck||!LP.deck.length)return;
+var w=LP.deck[LP.idx%LP.deck.length];
+var catEl=document.getElementById('lpCatLabel');
+var meanEl=document.getElementById('lpMean');
+var hintEl=document.getElementById('lpHint');
+var inEl=document.getElementById('lpInput');
+var fbEl=document.getElementById('lpFb');
+if(!meanEl)return;
+catEl.textContent=w.cat;
+meanEl.textContent=w.vi;
+var words=w.en.split(' ');
+var hint=words.map(function(wd){return wd[0]+'_'.repeat(Math.max(0,wd.length-1));}).join(' ');
+hintEl.textContent='Gợi ý: '+hint+' ('+w.en.length+' ký tự)';
+inEl.value='';
+inEl.className='wr-input';
+fbEl.textContent='';
+var cEl=document.getElementById('lpC');
+var wEl=document.getElementById('lpW');
+var sEl=document.getElementById('lpS');
+if(cEl)cEl.textContent=LP.c;
+if(wEl)wEl.textContent=LP.w;
+if(sEl)sEl.textContent=LP.s;
+setTimeout(function(){var i=document.getElementById('lpInput');if(i)i.focus();},50);
+}
+
+function lpCheck(){
+var inEl=document.getElementById('lpInput');
+var fbEl=document.getElementById('lpFb');
+if(!inEl||!LP.deck||!LP.deck.length)return;
+var val=inEl.value.trim().toLowerCase();
+if(!val)return;
+var w=LP.deck[LP.idx%LP.deck.length];
+var correct=w.en.toLowerCase();
+if(val===correct){
+  inEl.className='wr-input correct';
+  fbEl.className='wr-fb correct';
+  fbEl.textContent='✓ Chính xác!';
+  LP.c++;LP.s++;S.learned++;S.correct++;S.total++;
+  updateStats();
+  var cEl=document.getElementById('lpC');var sEl=document.getElementById('lpS');
+  if(cEl)cEl.textContent=LP.c;if(sEl)sEl.textContent=LP.s;
+  setTimeout(function(){LP.idx++;lpUpdateCard();},800);
+}else{
+  inEl.className='wr-input wrong';
+  fbEl.className='wr-fb wrong';
+  fbEl.innerHTML='✗ Đáp án: <strong>'+w.en+'</strong>';
+  LP.w++;LP.s=0;S.total++;
+  updateStats();
+  var wEl=document.getElementById('lpW');var sEl2=document.getElementById('lpS');
+  if(wEl)wEl.textContent=LP.w;if(sEl2)sEl2.textContent=LP.s;
+}
+}
+
+function lpShowAns(){
+if(!LP.deck||!LP.deck.length)return;
+var w=LP.deck[LP.idx%LP.deck.length];
+var fbEl=document.getElementById('lpFb');
+if(fbEl){fbEl.className='wr-fb wrong';fbEl.innerHTML='Đáp án: <strong>'+w.en+'</strong>';}
+}
+
 function renderReading(){
 document.getElementById('readingContent').innerHTML=READING.map((r,i)=>`<div class="ref-section"><div class="ref-title">Dạng ${i+1}: ${r.name} <span class="tag" style="margin-left:8px">${r.pct}</span></div><div class="ref-card"><h4>🔍 Nhận biết</h4><ul>${r.signs.map(s=>`<li>${s}</li>`).join('')}</ul></div><div class="ref-card"><h4>📋 Cách làm</h4><ol>${r.strategy.map(s=>`<li>${s}</li>`).join('')}</ol></div>${r.synonyms?`<div class="ref-card"><h4>📝 Từ đồng nghĩa thường gặp</h4><table class="ref-table"><tr><th>Từ gốc</th><th>Đồng nghĩa hay hỏi</th></tr>${r.synonyms.map(([w,s])=>`<tr><td><strong>${w}</strong></td><td>${s}</td></tr>`).join('')}</table></div>`:''}</div>`).join('');
 }
@@ -791,7 +1449,7 @@ document.getElementById('writingGuideContent').innerHTML=`
 - Restate opinion + Summarize main points</div>
 <p><strong>Mẫu câu:</strong> I strongly believe that... / The main reason for my view is that... / This is clearly demonstrated by the fact that... / To sum up, I firmly maintain that...</p></div>
 
-<div class="ref-card"><h4>Dạng 2: Advantages & Disadvantages</h4><div class="code-block"><span class="cyan">Introduction:</span> "This essay will discuss both the advantages and disadvantages of..."
+<div class="ref-card"><h4>Dạng 2: Advantages &amp; Disadvantages</h4><div class="code-block"><span class="cyan">Introduction:</span> "This essay will discuss both the advantages and disadvantages of..."
 
 <span class="green">Body 1: Advantages</span>
 - On the one hand, there are several benefits...
@@ -803,7 +1461,7 @@ document.getElementById('writingGuideContent').innerHTML=`
 
 <span class="cyan">Conclusion:</span> Tóm tắt + Nêu quan điểm cá nhân</div></div>
 
-<div class="ref-card"><h4>Dạng 3: Causes & Solutions</h4><div class="code-block"><span class="cyan">Introduction:</span> "This essay will examine the causes and suggest possible solutions."
+<div class="ref-card"><h4>Dạng 3: Causes &amp; Solutions</h4><div class="code-block"><span class="cyan">Introduction:</span> "This essay will examine the causes and suggest possible solutions."
 
 <span class="orange">Body 1: Causes</span>
 - One of the main causes is...
@@ -914,7 +1572,7 @@ const t=S.curTopic;if(!t)return;
 ['topicVocab','topicMindmap','topicPractice'].forEach(id=>document.getElementById(id).style.display='none');
 if(v==='vocab'){
 document.getElementById('topicVocab').style.display='block';
-document.getElementById('topicVocab').innerHTML=`${t.colloc?`<div class="ref-card" style="margin-bottom:16px"><h4>📌 Collocations</h4><p>${t.colloc}</p></div>`:''}<div class="vg">${t.words.map(w=>`<div class="vc"><div class="en">${w.en}</div><div class="vi">${w.vi}</div><div class="ex">${w.ex}</div>${w.col?`<div class="co">📌 ${w.col}</div>`:''}</div>`).join('')}</div>`;
+document.getElementById('topicVocab').innerHTML=`${t.colloc?`<div class="ref-card" style="margin-bottom:16px"><h4>📌 Collocations</h4><p>${t.colloc}</p></div>`:''}<div class="vg">${t.words.map(w=>`<div class="vc"><div class="en">${w.en}</div><div class="vi">${w.vi}</div><div class="ex">${w.ex||''}</div>${w.col?`<div class="co">📌 ${w.col}</div>`:''}</div>`).join('')}</div>`;
 }
 if(v==='mindmap'){
 document.getElementById('topicMindmap').style.display='block';
@@ -942,7 +1600,7 @@ function updateWR(){const d=S.wrDeck;if(!d.length)return;const w=d[S.wrIdx%d.len
 function wrCheck(){const inp=document.getElementById('wrInput').value.trim().toLowerCase();const w=S.wrDeck[S.wrIdx%S.wrDeck.length];if(!inp)return;if(inp===w.en.toLowerCase()){document.getElementById('wrInput').className='wr-input correct';document.getElementById('wrFb').className='wr-fb correct';document.getElementById('wrFb').textContent='✓ Chính xác!';S.wrC++;S.wrS++;S.learned++;S.correct++;S.total++;setTimeout(()=>{S.wrIdx++;updateWR();document.getElementById('wrInput').focus();},800);}else{document.getElementById('wrInput').className='wr-input wrong';document.getElementById('wrFb').className='wr-fb wrong';document.getElementById('wrFb').innerHTML=`✗ Đáp án: <strong>${w.en}</strong>`;S.wrW++;S.wrS=0;S.total++;}updateStats();document.getElementById('wrC').textContent=S.wrC;document.getElementById('wrW').textContent=S.wrW;document.getElementById('wrS').textContent=S.wrS;}
 function wrShow(){const w=S.wrDeck[S.wrIdx%S.wrDeck.length];document.getElementById('wrFb').className='wr-fb wrong';document.getElementById('wrFb').innerHTML=`Đáp án: <strong>${w.en}</strong>`;}
 
-// ===== TOPIC PRACTICE (global functions) =====
+// ===== TOPIC PRACTICE =====
 function tpShowCard(){if(!window._tpDeck||!window._tpDeck.length)return;if(window._tpIdx>=window._tpDeck.length)window._tpIdx=0;var w=window._tpDeck[window._tpIdx];document.getElementById('tpMean').textContent=w.vi;document.getElementById('tpHint').textContent='Gợi ý: '+w.en[0]+'_'.repeat(w.en.length-1)+' ('+w.en.length+' ký tự)';document.getElementById('tpIn').value='';document.getElementById('tpIn').className='wr-input';document.getElementById('tpFb').textContent='';document.getElementById('tpIn').focus();}
 function tpDoCheck(){var inp=document.getElementById('tpIn').value.trim().toLowerCase();var w=window._tpDeck[window._tpIdx];if(!inp||!w)return;if(inp===w.en.toLowerCase()){document.getElementById('tpIn').className='wr-input correct';document.getElementById('tpFb').className='wr-fb correct';document.getElementById('tpFb').textContent='✓ Chính xác!';window._tpC++;document.getElementById('tpC').textContent=window._tpC;setTimeout(function(){window._tpIdx++;tpShowCard();},800);}else{document.getElementById('tpIn').className='wr-input wrong';document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='✗ Đáp án: <strong>'+w.en+'</strong>';window._tpW++;document.getElementById('tpW').textContent=window._tpW;}}
 function tpShowAns(){var w=window._tpDeck[window._tpIdx];if(!w)return;document.getElementById('tpFb').className='wr-fb wrong';document.getElementById('tpFb').innerHTML='Đáp án: <strong>'+w.en+'</strong>';}
